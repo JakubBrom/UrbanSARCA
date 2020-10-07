@@ -490,7 +490,7 @@ class UrbanSARCA:
         msgBox.setIconPixmap(pixmap)
         msgBox.setText("Urban Green SARCA plug-in development has "
                        "been supported by project of Ministry of the "
-                       "Interior of the Czech Republic No. VH20172020015.")
+                       "Interior of the Czech Republic No. VH20172020015")
         msgBox.setWindowTitle(self.tr("Acknowledgement"))
         msgBox.exec()
 

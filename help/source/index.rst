@@ -27,6 +27,7 @@ Contents:
 
    description
    libs
+   ackn
 
 Indices and tables
 ==================
