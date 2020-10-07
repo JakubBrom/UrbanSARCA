@@ -101,7 +101,7 @@ def fixSRS(rasters_in, tmp_out=True):
     # Manage output list
     rasters_out = copy.copy(rasters_in)
 
-    # 1. Get rasters info TODO: vyházet pøebyteèný vstupy
+    # 1. Get rasters info
     EPSG_list = []
     LLC_X_list = []
     geoGCS_list = []
@@ -258,7 +258,6 @@ def fixSRS(rasters_in, tmp_out=True):
 
     return rasters_out
 
-
 def uniformSRS(rasters_in, epsg=None, tmp_out=True):
     """
     The function unifies SRSs of a group of input raster layers. If
@@ -287,6 +286,7 @@ def uniformSRS(rasters_in, epsg=None, tmp_out=True):
     # TODO: pokud GDAL neumi pracovat s nekterymi epsg (treba
     #  S-JTSK), tak by mozna bylo dobry zkusit QGIS QgsGeometryEngine
     #  (https://qgis.org/api/classQgsGeometryEngine.html)
+    # TODO: poresit mazani dat z tmp -
 
     # GDAL exceptions
     gdal_ver = gdal.__version__

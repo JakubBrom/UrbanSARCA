@@ -298,11 +298,6 @@ class UrbanSARCA:
     def calculate(self):
         """Processing of calculation"""
 
-        self.iface.messageBar().pushMessage(
-            self.tr("Info"),
-            self.tr("Calculation in progress. Wait a minute please."),
-            level=Qgis.Info)
-
         # Import layers and data
         # Rasters
         try:
@@ -387,6 +382,7 @@ class UrbanSARCA:
             self.out_folder = os.path.expanduser("~")
 
         # Calculation
+        # TODO: zkusit vyresit mazani docasnych souboru tady
         if precip_path != None:
             # 1. Layers clipping
             in_lyrs = [red_path, nir_path, depo_path, precip_path]
