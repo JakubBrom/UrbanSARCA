@@ -79,11 +79,13 @@ class UrbanSARCA:
         self.toolbar = self.iface.addToolBar(u'Urban Green SARCA')
         self.toolbar.setObjectName(u'Urban Green SARCA')
 
-        #print "** INITIALIZING UrbanSARCA"
+        # print "** INITIALIZING UrbanSARCA"
 
         self.pluginIsActive = False
         self.dockwidget = None
 
+        # Initial output folder path
+        self.out_folder_path = os.path.expanduser("~")
 
     # noinspection PyMethodMayBeStatic
     def tr(self, message):
@@ -99,7 +101,6 @@ class UrbanSARCA:
         """
         # noinspection PyTypeChecker,PyArgumentList,PyCallByClass
         return QCoreApplication.translate('Urban Green SARCA', message)
-
 
     def add_action(
         self,
@@ -174,7 +175,6 @@ class UrbanSARCA:
 
         return action
 
-
     def initGui(self):
         """Create the menu entries and toolbar icons inside the QGIS GUI."""
 
@@ -185,7 +185,7 @@ class UrbanSARCA:
             callback=self.run,
             parent=self.iface.mainWindow())
 
-      #--------------------------------------------------------------------------
+    # ----------------------------------------------------------------
 
     def setCboxEmpty(self, comboBox):
         """Setting of empty value (text) in comboBoxes"""
@@ -197,18 +197,14 @@ class UrbanSARCA:
     def pluginHelp(self):
         """Open the help file.
         """
-        self.help_file = os.path.join(self.plugin_dir, "help", "build",
-                                      "html", "index.html")
+        help_file = os.path.join(self.plugin_dir, "help", "build",
+                                 "html", "index.html")
         try:
-            # if sys.platform == 'linux2':
-            QDesktopServices.openUrl(QUrl(self.help_file))
-            # showPluginHelp(self.help_file)
-        # else:
-        #	os.startfile(self.help_file)
-        except:
+            QDesktopServices.openUrl(QUrl(help_file))
+        except IOError:
             self.iface.messageBar().pushMessage(self.tr("Help error"),
-                self.tr("Ooops, an error occured during help file opening..."),
-                level=Qgis.Warning, duration=5)
+                    self.tr("Ooops, an error occured during help file"
+                    " opening..."), level=Qgis.Warning, duration=5)
 
     def selectFile(self, comboBox):
         """
@@ -255,8 +251,7 @@ class UrbanSARCA:
                 self.out_folder_path)
             self.dockwidget.le_out_folder.setText(
                 str(self.out_folder_path))
-
-        except:
+        except Exception:
             self.iface.messageBar().pushMessage(
                 self.tr("Path error"),
                 self.tr(
@@ -303,12 +298,17 @@ class UrbanSARCA:
     def calculate(self):
         """Processing of calculation"""
 
+        self.iface.messageBar().pushMessage(
+            self.tr("Info"),
+            self.tr("Calculation in progress. Wait a minute please."),
+            level=Qgis.Info)
+
         # Import layers and data
         # Rasters
         try:
             red_index = self.dockwidget.cbox_red.currentIndex()
             red_path = self.dockwidget.cbox_red.layer(red_index).source()
-        except:
+        except Exception:
             red_path = self.dockwidget.cbox_red.currentText()
 
         if red_path is None or red_path == "":
@@ -324,7 +324,7 @@ class UrbanSARCA:
         try:
             nir_index = self.dockwidget.cbox_nir.currentIndex()
             nir_path = self.dockwidget.cbox_nir.layer(nir_index).source()
-        except:
+        except Exception:
             nir_path = self.dockwidget.cbox_nir.currentText()
 
         if nir_path is None or nir_path == "":
@@ -339,7 +339,7 @@ class UrbanSARCA:
         try:
             depo_index = self.dockwidget.cbox_depo.currentIndex()
             depo_path = self.dockwidget.cbox_depo.layer(depo_index).source()
-        except:
+        except Exception:
             depo_path = self.dockwidget.cbox_depo.currentText()
 
         if depo_path is None or depo_path == "":
@@ -362,7 +362,7 @@ class UrbanSARCA:
                 precip_index = self.dockwidget.cbox_precip.currentIndex()
                 precip_path = self.dockwidget.cbox_precip.layer(
                     precip_index).source()
-            except:
+            except Exception:
                 precip_path = self.dockwidget.cbox_precip.currentText()
 
             if depo_path is None or depo_path == "":
@@ -472,7 +472,7 @@ class UrbanSARCA:
                 out_file = os.path.join(self.out_folder,
                             self.outnames[i] + out_suffix)  # construction of the path to the resulted layer
                 self.iface.addRasterLayer(out_file, self.outnames[i])  # opening the resulted layer
-            except:
+            except Exception:
                 self.iface.messageBar().pushMessage("Info",
                     self.tr("File " + self.outnames[i] +
                     " has not been uploaded in to QGIS."),
@@ -515,7 +515,6 @@ class UrbanSARCA:
                 self.dockwidget = UrbanSARCADockWidget()
 
             # Set path to out folder
-            self.out_folder_path = os.path.expanduser("~") # Initial
             self.dockwidget.pb_out.clicked.connect(self.outFolder)
 
             # Initial setting of the empty cboxes
