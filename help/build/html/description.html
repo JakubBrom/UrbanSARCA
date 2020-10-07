@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Description of Urban Green SARCA (In Czech) &mdash; UrbanSARCA 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="UrbanSARCA 0.1 documentation" href="index.html"/>
+        <link rel="next" title="Documentation" href="libs.html"/>
+        <link rel="prev" title="Welcome to Urban Green SARCA documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> UrbanSARCA
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Description of Urban Green SARCA (In Czech)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#funkcionalita-modulu-urban-green-sarca">Funkcionalita modulu Urban Green SARCA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vypocet-vystupu-modulu-urban-green-sarca">Výpočet výstupů modulu Urban Green SARCA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mnozstvi-biomasy">Množství biomasy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-listove-plochy">Index listové plochy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kontaminace-zelene-a-pudy-intercepcni-faktor">Kontaminace zeleně a půdy, intercepční faktor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#referencni-urovne-a-prekroceni-hygienickeho-limitu-kontaminace-biomasy">Referenční úrovně a  překročení hygienického limitu kontaminace biomasy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#prehled-pouzite-literatury">Přehled použité literatury</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="libs.html">Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">UrbanSARCA</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Description of Urban Green SARCA (In Czech)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/description.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="description-of-urban-green-sarca-in-czech">
+<h1>Description of Urban Green SARCA (In Czech)<a class="headerlink" href="#description-of-urban-green-sarca-in-czech" title="Permalink to this headline">¶</a></h1>
+<p>Modul Urban Green SARCA je softwarový GIS nástroj vytvořený pro účely odhadu
+depozice radionuklidu na povrchu vegetace a půdy, respektive ploch bez
+vegetace v časné fázi radiační havárie. Modul umožňuje odhadnout kontaminaci
+vegetačního krytu prostřednictvím satelitních snímků, podkladů o celkové
+depozici radionuklidu a na základě informace o úhrnu srážek v průběhu
+depozice radionuklidu v zájmovém území. Výpočet je tedy prováděn pro podmínky
+suché i mokré depozice radionuklidu. Vzhledem k tomu, že modul umožňuje
+výpočet jednotlivých proměnných s využitím podrobných satelitních dat, je
+využití modulu vhodné zejména pro urbánní území a pro území, kde nejsou k
+dispozici informace o jednotlivých typech zeleně (vegetace) nebo je
+identifikace zeleně značně komplikovaná.</p>
+<p>Modul je koncipován tak, aby minimalizoval množství vstupů a zároveň
+poskytoval dostatečné množství výstupů důležitých pro následné rozhodování v
+oblasti radiační ochrany urbánních území.</p>
+<div class="section" id="funkcionalita-modulu-urban-green-sarca">
+<h2>Funkcionalita modulu Urban Green SARCA<a class="headerlink" href="#funkcionalita-modulu-urban-green-sarca" title="Permalink to this headline">¶</a></h2>
+<p>Funkcionalita modulu vychází z programu SARCA (Brom et al. 2015), který je
+nicméně určen pro analýzu kontaminace polních plodin a je založen na
+modelování časových změn produkčních charakteristik plodin. Oproti tomu,
+Urban Green SARCA využívá pro odhad produkčních charakteristik vegetace
+dostupná satelitní data.</p>
+<p>Výpočet jednotlivých výstupů lze rozdělit do dvou částí. V první části jsou
+ze satelitních dat vypočteny produkční charakteristiky, tedy množství biomasy
+a index listové plochy vegetace. Ve druhé části je vypočtena depozice
+radioaktivního kontaminantu na povrchu vegetace a na ostatních površích. Na
+základě vypočtených dat jsou dále hodnoceny kategorie radioaktivní
+kontaminace vegetace (zeleně) podle stanovených referenčních úrovní
+kontaminace (viz dále). Doplňkově je vypočtena vrstva intercepčního faktoru,
+tedy relativní distribuce radionuklidu mezi zeleň a ostatní povrchy a
+vypočtena je též hmotnostní kontaminace, včetně vyznačení nadlimitní
+hmotnostní kontaminace zeleně. Způsoby výpočtu jednotlivých ukazatelů jsou
+uvedeny dále.</p>
+</div>
+<div class="section" id="vypocet-vystupu-modulu-urban-green-sarca">
+<h2>Výpočet výstupů modulu Urban Green SARCA<a class="headerlink" href="#vypocet-vystupu-modulu-urban-green-sarca" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mnozstvi-biomasy">
+<h3>Množství biomasy<a class="headerlink" href="#mnozstvi-biomasy" title="Permalink to this headline">¶</a></h3>
+<p>Při výpočtu množství biomasy (B; <img class="math" src="_images/math/f926cbe0d4b248852df906188bc97057e8812213.svg" alt="t.ha^{-1}"/>) na dané ploše vycházíme ze
+vztahu mezi množstvím zelené biomasy a jejím spektrálním projevem. Pro
+vyjádření byl použit následující zjednodušený vztah pro odhad množství biomasy:</p>
+<div class="math">
+<p><img src="_images/math/607d3b3bc20dbb75d9ad7311ecc382f5fc89ab9a.svg" alt="B=50\cdot NDVI^{2.5},"/></p>
+</div><p>kde NDVI je normalizovaný rozdílový vegetační index (Normalized Difference
+Vegetation Index; Rouse Jr et al., (1973)):</p>
+<div class="math">
+<p><img src="_images/math/526248652db264633dc79e42431fad831fd63db2.svg" alt="NDVI=\frac{R_{NIR}-R_{RED}}{R_{NIR}+R_{RED}},"/></p>
+</div><p>kde <img class="math" src="_images/math/8ef9577b8f0f5dbeb51eb4a1d3d7c0929fd604fd.svg" alt="R_{NIR}"/> a <img class="math" src="_images/math/baeab176d14c8f6ce384408ce6dded6dfd9a1c5e.svg" alt="R_{RED}"/> jsou spektrální reflektance v blízké
+inrfačervené (NIR; přibližně 800 nm) a v červené oblasti (RED; přibližně 670
+nm) (rel.). Použitý model představuje hrubý odhad živé biomasy zeleně. Do
+budoucna předpokládáme nahrazení uvedeného vztahu komplexnějším modelem.</p>
+</div>
+<div class="section" id="index-listove-plochy">
+<h3>Index listové plochy<a class="headerlink" href="#index-listove-plochy" title="Permalink to this headline">¶</a></h3>
+<p>Index listové plochy (bezrozm.) je počítán pomocí jednoduchého lineárního
+vztahu mezi listovou plochou a spektrálním indexem NDVI:</p>
+<div class="math">
+<p><img src="_images/math/6e13d81fbc01999a77f054e4e799679bea37f28c.svg" alt="LAI=4.9\cdot NDVI-0.46"/></p>
+</div></div>
+<div class="section" id="kontaminace-zelene-a-pudy-intercepcni-faktor">
+<h3>Kontaminace zeleně a půdy, intercepční faktor<a class="headerlink" href="#kontaminace-zelene-a-pudy-intercepcni-faktor" title="Permalink to this headline">¶</a></h3>
+<p>Pro rozhodování o množství depozice radioaktivního materiálu na povrchu
+porostu a povrchu půdy je vypočten intercepční faktor (rel.), který je
+ukazatelem, jak velká frakce depozice zůstává na povrchu porostu. Hodnota
+závisí na indexu listové plochy porostu a úhrnu srážek v průběhu depozice.
+Podle Müllera a Pröhla (1993) lze intercepční frakci (faktor) depozice
+radioizotopu fw v časné fázi radiační havárie vypočítat podle vzorce:</p>
+<div class="math">
+<p><img src="_images/math/de91e97e5952fa61ea4f29b3f2bc39f35f6f7cb1.svg" alt="f_{w}=\min\left[1;\frac{LAI\cdot k\cdot S\left(1-\mathrm{e^{-\frac{\ln2}{3S}R}}\right)}{R}\right]"/></p>
+</div><p>kde k je specifický faktor pro daný kontaminant (I: k = 0.5; Sr, Ba: k = 2;
+Cs a ostatní radionuklidy: k = 1), S je tloušťka vodního filmu na rostlinách
+(mm) a R je úhrn srážek (mm). Hodnota S je zpravidla 0,15 – 0,3 mm se střední
+hodnotou 0,2 mm (Pröhl, 2003). Výpočet depozice na povrchu rostlin vychází z
+předpokladu, že depozice na povrchu rostlin je poměrnou částí celkové
+depozice danou intercepčním faktorem:</p>
+<div class="math">
+<p><img src="_images/math/cb19d1b93c4b8ad5b7dd134d85733c962e56172f.svg" alt="D_{biomasa}=D_{celk}\cdot f_{w}"/></p>
+</div><p>kde <img class="math" src="_images/math/30e7167632c9711dacf28e8fa0a264cec9da493b.svg" alt="D_{biomasa}"/> je měrná depozice radioizotopu na povrchu rostlin
+<img class="math" src="_images/math/f480e2b33d5811e34d8e94848eaca4fc30e509a4.svg" alt="(Bq.m^{-2})"/> a Dcelk je celková měrná radioaktivní depozice <img class="math" src="_images/math/66c25d64c712b318d37a26f2febec280c68ffe57.svg" alt="(Bq
+.m^{-2})"/> zadávaná jako vstup do modelu. Měrná depozice radioizotopu na
+povrchu půdy (Dpuda ; <img class="math" src="_images/math/c7eebed3c8b3f7a7d7db99db3461fc4efb9d61bc.svg" alt="Bq.m^{-2}"/>) je pak rozdílem mezi celkovou měrnou
+depozicí a měrnou depozicí na povrchu porostu:</p>
+<div class="math">
+<p><img src="_images/math/1d687c1097c40200838b8a1a0927cbf7528320f9.svg" alt="D_{puda}=D_{celk}-D_{biomasa}"/></p>
+</div><p>Pokud jsou hodnoty vypočteného množství biomasy menší než 0,5 <img class="math" src="_images/math/fd6c65d0187f7f59bcf8ee6c30bb28914e047ea0.svg" alt="t
+.ha^{-1}"/>, je vypočtena pouze měrná depozice radioaktivního materiálu na
+povrchu půdy. Důvodem je minimální předpoklad možnosti odstranění biomasy.
+Doplňkovou charakteristikou je hmotnostní kontaminace biomasy zeleně (Dhmot;
+<img class="math" src="_images/math/c7eebed3c8b3f7a7d7db99db3461fc4efb9d61bc.svg" alt="Bq.m^{-2}"/>), která je vypočtena podle vztahu:</p>
+<div class="math">
+<p><img src="_images/math/5e69fa0ac70457fad8a650f05057e8650ce77362.svg" alt="D_{hmot}=\frac{D_{biomasa}}{B \cdot 0.1}"/></p>
+</div></div>
+<div class="section" id="referencni-urovne-a-prekroceni-hygienickeho-limitu-kontaminace-biomasy">
+<h3>Referenční úrovně a  překročení hygienického limitu kontaminace biomasy<a class="headerlink" href="#referencni-urovne-a-prekroceni-hygienickeho-limitu-kontaminace-biomasy" title="Permalink to this headline">¶</a></h3>
+<p>Území kontaminované radioaktivní depozicí je pro praktické účely rozděleno na
+tři oblasti, v závislosti na stanovených referenčních úrovních. Rozdělení
+sledovaného území do oblastí podle referenčních úrovní vychází z předpokladu,
+že lze vymezit území, ve kterých kontaminace nepřekračuje stanovenou úroveň
+dávkového příkonu nebezpečného pro obyvatelstvo a zvířata (hodnota 0), dále
+území ve kterých lze provádět opatření za účelem radiační ochrany (hodnota 1)
+a území, kde úroveň radioaktivní kontaminace, respektive dávkového příkonu
+překračuje bezpečnou hranici pro další management (hodnota 2).
+Pro referenční úrovně RU 0 a RU 2 není doporučeno odstranění biomasy za
+účelem ochrany půdy. V prvním případě (RU 0) nepřesahuje kontaminace
+stanovenou mez a nejsou ze předpokládána další rizika, zeleň a produkci
+rostlinné biomasy je možné využít běžným způsobem, případně v omezené míře na
+základě dalších postupů. Naopak v případě ploch zařazených do referenční
+úrovně RU 2 existuje předpoklad nadlimitní radioaktivní kontaminace ploch a
+možnost ohrožení zdraví pracovníků pověřených manipulací s nadzemní biomasou
+rostlin. V rámci ploch zařazených do RU 1 lze předpokládat půdoochranný
+význam vegetačního krytu, který lze za daných podmínek odstranit z půdního
+povrchu. Limitem je zde množství živé nadzemní biomasy 0,5 <img class="math" src="_images/math/f926cbe0d4b248852df906188bc97057e8812213.svg" alt="t.ha^{-1}"/>,
+kdy předpokládáme, že sklizeň menšího množství biomasy na danou plochu je již
+neefektivní, případně technicky nemožná. Hranice referenčních úrovní lze
+nastavit přímo v uživatelském rozhraní Urban Green SARCA. Přednastaveny jsou
+hodnoty 5000 <img class="math" src="_images/math/c7eebed3c8b3f7a7d7db99db3461fc4efb9d61bc.svg" alt="Bq.m^{-2}"/> a 3 <img class="math" src="_images/math/41a1307401ea7284ed063e5ad5441a4cc28fd02c.svg" alt="MBq.m^{-2}"/>.
+Vedle vrstvy referenčních úrovní je výstupem modelu vrstva překročení
+hygienického limitu kontaminace biomasy. Rastrová vrstva nese hodnoty 0 pro
+pixely, ve kterých je zjištěna hodnota úrovně hmotnostní kontaminace biomasy
+menší než stanovená hodnota v uživatelském rozhraní Urban Green SARCA.
+Hodnoty přesahující stanovený hygienický limit jsou zařazeny do kategorie 1.
+V modulu Urban Green SARCA je přednastavena hodnota 1000 <img class="math" src="_images/math/9cf742f34c03cb38a035c0002601b7a2d5277c51.svg" alt="(Bq.kg^{-1})"/>,
+která odpovídá nejvyšší přípustné úrovni radioaktivní kontaminace potravin pro
+radiačně mimořádné situace podle vyhlášky 389/2010 Sb. o radiační ochraně
+(Vyhláška 389/2012 Sb. o radiační ochraně, 2012).</p>
+</div>
+</div>
+<div class="section" id="prehled-pouzite-literatury">
+<h2>Přehled použité literatury<a class="headerlink" href="#prehled-pouzite-literatury" title="Permalink to this headline">¶</a></h2>
+<p><em>Muller, H., Prohl, G., 1993. Ecosys-87: A dynamic model for assessing
+radiological consequences of nuclear accidents. Health Phys. 64, 232–252.</em></p>
+<p><em>Pröhl, G., 2003. Radioactivity in the terestrial environment, in: Scott, E.M.
+(Ed.), Modelling Radioactivity in the Environment. Elsevier, Amsterdam;
+Boston, pp. 87–108.</em></p>
+<p><em>Rouse Jr, J., Haas, R., Schell, J., Deering, D., 1973. Monitoring vegetation
+systems in the Great Plains with ERTS In Third Earth Resources Technology
+Satellite-1, in: Third Earth Resources Technology Satellite-1 Symposium: The
+Proceedings of a Symposium Held by Goddard Space Flight Center at Washington,
+DC on December 10-14, 1973: Prepared at Goddard Space Flight Center.
+Scientific and Technical Information Office, NASA, pp. 309–317.</em></p>
+<p><em>Vyhláška 389/2012 Sb. o radiační ochraně, 2012.</em></p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="libs.html" class="btn btn-neutral float-right" title="Documentation" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to Urban Green SARCA documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Jakub Brom, ENKI o.p.s. Třeboň.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> and ❤️  using a custom <a href="https://github.com/LinxiFan/Sphinx-theme">theme</a> based on <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

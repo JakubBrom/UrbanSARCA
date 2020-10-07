@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/urban_sarca" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>

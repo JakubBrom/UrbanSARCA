@@ -1,0 +1,50 @@
+# This file contains metadata for your plugin.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=Urban Green SARCA
+qgisMinimumVersion=3.0
+description=Plugin for analysis of radioactive contamination of vegetation cover
+ in (mostly) urban environment
+version=0.1
+author=Jakub Brom, ENKI o.p.s. Třeboň
+email=jbrom@lanres.cz
+
+about=The Urban Green SARCA (USG) module is a  GIS tool created for the purpose of estimating the deposition of radionuclides on the surface of vegetation and soil, or in areas without vegetation in the early phase of a radiation accident. The module makes it possible to estimate the radioactive contamination of the vegetation cover by means of satellite images, total radioactivity deposition data and precipitation amount data during the radiation accident. USG provides a “first view” on spatial information of a radioactive contamination of vegetation and soils within large areas in a very simple way and thus it is a usable tool for decision makers and authorities in case of radiation accident. The usage of module is suitable mostly for areas where the vegetation cover and amount of biomass is not very well documented, e.g. urban areas.
+
+tracker=http://bugs
+repository=http://repo
+# End of mandatory metadata
+
+# Recommended items:
+
+hasProcessingProvider=no
+# Uncomment the following line and add your changelog:
+changelog=
+    0.1: (201007)
+        The first version say Hello World!
+
+# Tags are comma separated with spaces allowed
+tags=raster, remote sensing, radioactive accident, contamination, radioactivity, vegetation, soil
+
+homepage=https://www.enki.cz
+category=Plugins
+icon=icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
+# Since QGIS 3.8, a comma separated list of plugins to be installed
+# (or upgraded) can be specified.
+# Check the documentation for more information.
+# plugin_dependencies=
+
+Category of the plugin: Raster, Vector, Database or Web
+# category=
+
+# If the plugin can run on QGIS Server.
+server=False
+

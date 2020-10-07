@@ -1,0 +1,2843 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Documentation &mdash; UrbanSARCA 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="UrbanSARCA 0.1 documentation" href="index.html"/>
+        <link rel="prev" title="Description of Urban Green SARCA (In Czech)" href="description.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> UrbanSARCA
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="description.html">Description of Urban Green SARCA (In Czech)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-urban-sarca-lib">Module urban_sarca_lib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sebcs-lib">Module SEBCS_lib</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">UrbanSARCA</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/libs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-urban-sarca-lib">
+<h2>Module urban_sarca_lib<a class="headerlink" href="#module-urban-sarca-lib" title="Permalink to this headline">¶</a></h2>
+<p>Urban Green SARCA library includes functions usable for quick estimation of
+radioactive deposition of the surface.</p>
+<span class="target" id="module-urban_sarca_lib"></span><dl class="function">
+<dt id="urban_sarca_lib.contBiomass">
+<code class="descclassname">urban_sarca_lib.</code><code class="descname">contBiomass</code><span class="sig-paren">(</span><em>depo</em>, <em>IF</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/urban_sarca_lib.html#contBiomass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#urban_sarca_lib.contBiomass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Radiaoctive contamination of biomass <img class="math" src="_images/math/f480e2b33d5811e34d8e94848eaca4fc30e509a4.svg" alt="(Bq.m^{-2})"/></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>depo</strong> – Total radioactive deposition <img class="math" src="_images/math/f480e2b33d5811e34d8e94848eaca4fc30e509a4.svg" alt="(Bq.m^{-2})"/></li>
+<li><strong>IF</strong> – Interception Factor (rel.)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Radioactive contamination of biomass <img class="math" src="_images/math/f480e2b33d5811e34d8e94848eaca4fc30e509a4.svg" alt="(Bq.m^{-2})"/></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="urban_sarca_lib.contMass">
+<code class="descclassname">urban_sarca_lib.</code><code class="descname">contMass</code><span class="sig-paren">(</span><em>cont_biomass</em>, <em>fresh_biomass</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/urban_sarca_lib.html#contMass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#urban_sarca_lib.contMass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculation radioactive contamination of fresh vegetation mass  <img class="math" src="_images/math/9cf742f34c03cb38a035c0002601b7a2d5277c51.svg" alt="(Bq.kg^{-1})"/></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>cont_biomass</strong> – Radioactive deposition on biomass  <img class="math" src="_images/math/f480e2b33d5811e34d8e94848eaca4fc30e509a4.svg" alt="(Bq.m^{-2})"/></li>
+<li><strong>fresh_biomass</strong> – Amount of fresh biomass of vegetation     <img class="math" src="_images/math/62e67f8dcec184eefc400a3444df047a53b6a7d2.svg" alt="(t.ha^{-1})"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Fresh vegetation mass radioactive contamination        <img class="math" src="_images/math/9cf742f34c03cb38a035c0002601b7a2d5277c51.svg" alt="(Bq.kg^{-1})"/></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="urban_sarca_lib.contSoil">
+<code class="descclassname">urban_sarca_lib.</code><code class="descname">contSoil</code><span class="sig-paren">(</span><em>depo</em>, <em>IF</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/urban_sarca_lib.html#contSoil"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#urban_sarca_lib.contSoil" title="Permalink to this definition">¶</a></dt>
+<dd><p>Radiaoctive contamination of soil <img class="math" src="_images/math/f480e2b33d5811e34d8e94848eaca4fc30e509a4.svg" alt="(Bq.m^{-2})"/></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>depo</strong> – Total radioactive deposition <img class="math" src="_images/math/f480e2b33d5811e34d8e94848eaca4fc30e509a4.svg" alt="(Bq.m^{-2})"/></li>
+<li><strong>IF</strong> – Interception Factor (rel.)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Radioactive contamination of soil <img class="math" src="_images/math/f480e2b33d5811e34d8e94848eaca4fc30e509a4.svg" alt="(Bq.m^{-2})"/></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="urban_sarca_lib.hygLimit">
+<code class="descclassname">urban_sarca_lib.</code><code class="descname">hygLimit</code><span class="sig-paren">(</span><em>cont_mass</em>, <em>hyg_lim=1000</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/urban_sarca_lib.html#hygLimit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#urban_sarca_lib.hygLimit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mask for hygienic limit of biomass radioactive contamination 
+exceeding.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>cont_mass</strong> – Fresh vegetation mass radioactive contamination       <img class="math" src="_images/math/9cf742f34c03cb38a035c0002601b7a2d5277c51.svg" alt="(Bq.kg^{-1})"/></li>
+<li><strong>hyg_lim</strong> – Hygienic limit of mass radioactive contamination        <img class="math" src="_images/math/9cf742f34c03cb38a035c0002601b7a2d5277c51.svg" alt="(Bq.kg^{-1})"/>. Default value is 1000 <img class="math" src="_images/math/9cf742f34c03cb38a035c0002601b7a2d5277c51.svg" alt="(Bq.kg^{-1})"/>        according to Czech law.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Mask for hygienic limit of biomass radioactive         contamination exceeding.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="urban_sarca_lib.interceptFactor">
+<code class="descclassname">urban_sarca_lib.</code><code class="descname">interceptFactor</code><span class="sig-paren">(</span><em>LAI</em>, <em>precip</em>, <em>fresh_biomass</em>, <em>k=1.0</em>, <em>S=0.2</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/urban_sarca_lib.html#interceptFactor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#urban_sarca_lib.interceptFactor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interception factor for both dry and wet deposition of
+radionuclides.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>LAI</strong> – Leaf Area Index (unitless)</li>
+<li><strong>k</strong> – Constant of radionuclide: I = 0.5, Sr and Ba = 2.0, Cs and    another radionuclides = 1.0</li>
+<li><strong>precip</strong> – Precipitation amount (mm) for period of deposition       (ca 24 hours after radiation accident).</li>
+<li><strong>fresh_biomass</strong> – Amount of fresh biomass <img class="math" src="_images/math/62e67f8dcec184eefc400a3444df047a53b6a7d2.svg" alt="(t.ha^{-1})"/></li>
+<li><strong>S</strong> – Mean thickness of water film at plant leaves (mm).    Default S =     0.2 mm</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Interception Factor (rel.)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="urban_sarca_lib.referLevel">
+<code class="descclassname">urban_sarca_lib.</code><code class="descname">referLevel</code><span class="sig-paren">(</span><em>depo</em>, <em>ref_level1=5000</em>, <em>ref_level2=3000000</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/urban_sarca_lib.html#referLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#urban_sarca_lib.referLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mask of radioactive deposition for three reference levels (categories):</p>
+<p><em>0: Low</em></p>
+<p><em>1: Middle</em></p>
+<p><em>2: High</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>depo</strong> – Total radioactive deposition <img class="math" src="_images/math/f480e2b33d5811e34d8e94848eaca4fc30e509a4.svg" alt="(Bq.m^{-2})"/></li>
+<li><strong>ref_level1</strong> – Lower reference level treshold       <img class="math" src="_images/math/f480e2b33d5811e34d8e94848eaca4fc30e509a4.svg" alt="(Bq.m^{-2})"/>. Default value = 5000 <img class="math" src="_images/math/c7eebed3c8b3f7a7d7db99db3461fc4efb9d61bc.svg" alt="Bq.m^{-2}"/></li>
+<li><strong>ref_level2</strong> – Upper reference level treshold       <img class="math" src="_images/math/f480e2b33d5811e34d8e94848eaca4fc30e509a4.svg" alt="(Bq.m^{-2})"/>. Default value = 3000000 <img class="math" src="_images/math/c7eebed3c8b3f7a7d7db99db3461fc4efb9d61bc.svg" alt="Bq.m^{-2}"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Mask of radioactive deposition for three reference levels</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sebcs-lib">
+<h2>Module SEBCS_lib<a class="headerlink" href="#module-sebcs-lib" title="Permalink to this headline">¶</a></h2>
+<p>Module SEBCS_lib is library of SEBCS software (Brom 2020) designed for
+geographical and remotely sensed purposes, mainly for analysis of energy
+balance of the surface. Some methods are used within Urban Green SARCA software.</p>
+<span class="target" id="module-SEBCS_lib"></span><dl class="class">
+<dt id="SEBCS_lib.GeoIO">
+<em class="property">class </em><code class="descclassname">SEBCS_lib.</code><code class="descname">GeoIO</code><a class="reference internal" href="_modules/SEBCS_lib.html#GeoIO"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.GeoIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class includes functions for reading of geotransformation features
+from raster and for writing ne rasters from numpy arrays.</p>
+<dl class="method">
+<dt id="SEBCS_lib.GeoIO.arrayToRast">
+<code class="descname">arrayToRast</code><span class="sig-paren">(</span><em>arrays</em>, <em>names</em>, <em>prj</em>, <em>gtransf</em>, <em>EPSG</em>, <em>out_folder</em>, <em>driver_name='GTiff'</em>, <em>out_file_name=None</em>, <em>multiband=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#GeoIO.arrayToRast"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.GeoIO.arrayToRast" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export numpy 2D arrays to multiband or singleband raster
+files. Following common raster formats are accepted for export:</p>
+<ul class="simple">
+<li>ENVI .hdr labeled raster format</li>
+<li>Erdas Imagine (.img) raster format</li>
+<li>Idrisi raster format (.rst)</li>
+<li>TIFF / BigTIFF / GeoTIFF (.tif) raster format</li>
+<li>PCI Geomatics Database File (.pix) raster format</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>arrays</strong> (<em>numpy.ndarray</em><em>, </em><em>list</em>) – Numpy array or list of arrays for export to raster.</li>
+<li><strong>names</strong> (<em>str</em><em>, </em><em>list</em>) – Name or list of names of the exported bands (in case              of multiband raster) or particular rasters (in case of singleband               rasters).</li>
+<li><strong>prj</strong> (<em>str</em>) – Projection information of the exported raster (dataset).</li>
+<li><strong>gtransf</strong> (<em>tuple</em>) – The affine transformation coefficients.</li>
+<li><strong>EPSG</strong> (<em>int</em>) – EPSG Geodetic Parameter Set code.</li>
+<li><strong>out_folder</strong> (<em>str</em>) – Path to folder where the raster(s) will be created.</li>
+<li><strong>driver_name</strong> (<em>str</em>) – GDAL driver. ‘GTiff’ is default.</li>
+<li><strong>out_file_name</strong> (<em>str</em>) – Name of exported multiband raster.</li>
+<li><strong>multiband</strong> (<em>bool</em>) – Option of multiband raster creation.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Raster singleband or multiband file(s)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">raster</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.GeoIO.lyrsExtent">
+<code class="descname">lyrsExtent</code><span class="sig-paren">(</span><em>in_lyrs_list</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#GeoIO.lyrsExtent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.GeoIO.lyrsExtent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check differences between size of the input layers. Function compares
+rasters only on basis of number of columns and rows.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>in_lyrs_list</strong> (<em>list</em>) – List of layers (Numpy 2D arrays).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.GeoIO.rasterToArray">
+<em class="property">static </em><code class="descname">rasterToArray</code><span class="sig-paren">(</span><em>layer</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#GeoIO.rasterToArray"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.GeoIO.rasterToArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Conversion of raster layer to numpy array.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>layer</strong> (<em>str</em>) – Path to raster layer.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">raster file converted to numpy array</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.GeoIO.readGeo">
+<code class="descname">readGeo</code><span class="sig-paren">(</span><em>rast</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#GeoIO.readGeo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.GeoIO.readGeo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reading geographical information from raster using
+GDAL.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>rast</strong> (<em>str</em>) – Path to raster file in GDAL accepted format.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The affine transformation coefficients.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">tuple</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Projection information of the raster (dataset).</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Pixel width (m) on X axis.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Pixel height (m) on Y axis.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">EPSG Geodetic Parameter Set code.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="SEBCS_lib.HeatFluxes">
+<em class="property">class </em><code class="descclassname">SEBCS_lib.</code><code class="descname">HeatFluxes</code><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculation of heat fluxes and heat balance features from spectral
+and thermal spatial data and meteorological measurements. The class
+contains a set of methods for calculation heat balance, e.g. ground
+heat flux, sensible heat flux, latent heat flux, evaporative fraction,
+omega factor (decoupling coefficient), surface resistance for water
+vapour transfer etc. Calculation for both aerodynamic and gradient
+method is included.</p>
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.aeroEF">
+<code class="descname">aeroEF</code><span class="sig-paren">(</span><em>LE</em>, <em>Rn</em>, <em>G</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.aeroEF"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.aeroEF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaporative fraction calculated using aerodynamic method (rel.).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>LE</strong> (<em>numpy.ndarray</em>) – Latent heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>Rn</strong> (<em>numpy.ndarray</em>) – Total net radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>G</strong> (<em>numpy.ndarray</em>) – Ground heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Evaporative fraction (rel.)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.bowen">
+<code class="descname">bowen</code><span class="sig-paren">(</span><em>flux_H</em>, <em>LE</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.bowen"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.bowen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bowen ratio according to Bowen (1926)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>flux_H</strong> (<em>numpy.ndarray</em>) – Sensible heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>LE</strong> (<em>numpy.ndarray</em>) – Latent heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Bowen ratio (unitless)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.cwsi">
+<code class="descname">cwsi</code><span class="sig-paren">(</span><em>LEp</em>, <em>ra</em>, <em>rc</em>, <em>E_Z_sat</em>, <em>e_Z</em>, <em>rho</em>, <em>delta</em>, <em>gamma</em>, <em>cp=1012</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.cwsi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.cwsi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Crop Water Stress Index calculated according to Jackson et al. (
+1981, 1988).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>LEp</strong> (<em>numpy.ndarray</em>) – Potential evaporation latent heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>ra</strong> (<em>numpy.ndarray</em>) – Aerodynamic resistance <img class="math" src="_images/math/370352244d2f01b99b605ada38edfd25bdacdd39.svg" alt="(s.m^{-1})"/></li>
+<li><strong>rc</strong> – Surface resistance for water vapour transfer          <img class="math" src="_images/math/370352244d2f01b99b605ada38edfd25bdacdd39.svg" alt="(s.m^{-1})"/></li>
+<li><strong>E_Z_sat</strong> (<em>numpy.ndarray</em>) – Saturated water vapour pressure (kPa).</li>
+<li><strong>e_Z</strong> (<em>numpy.ndarray</em>) – Water vapour pressure (kPa).</li>
+<li><strong>rho</strong> (<em>numpy.ndarray</em>) – Specific air density <img class="math" src="_images/math/33223e2102dac2b47995a54fe6729f96aa1dbea2.svg" alt="(g.m^{-3})"/></li>
+<li><strong>delta</strong> (<em>numpy.ndarray</em>) – Delta function <img class="math" src="_images/math/d793c41ab852eafc4506371b44cd5f0d50ce2ed7.svg" alt="(kPa.K^{-1})"/></li>
+<li><strong>gamma</strong> (<em>numpy.ndarray</em>) – Psychrometric constant <img class="math" src="_images/math/d793c41ab852eafc4506371b44cd5f0d50ce2ed7.svg" alt="(kPa.K^{-1})"/>.</li>
+<li><strong>cp</strong> (<em>float</em>) – Thermal heat capacity of dry air <img class="math" src="_images/math/baac15e59e6eca804dd30cc7e9e36500d98b3908.svg" alt="(K.kg^{-1}.K^{-1})"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Crop Water Stress Index (CWSI)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.fluxHAer">
+<code class="descname">fluxHAer</code><span class="sig-paren">(</span><em>ra</em>, <em>rho</em>, <em>dT</em>, <em>cp=1012.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.fluxHAer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.fluxHAer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sensible heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/> calculated using aerodynamic 
+method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ra</strong> (<em>numpy.ndarray</em>) – Aerodynamic resistance for heat and momentum transfer                <img class="math" src="_images/math/370352244d2f01b99b605ada38edfd25bdacdd39.svg" alt="(s.m^{-1})"/> calculated according to Thom (1975)</li>
+<li><strong>rho</strong> (<em>numpy.ndarray</em>) – Specific air density <img class="math" src="_images/math/33223e2102dac2b47995a54fe6729f96aa1dbea2.svg" alt="(g.m^{-3})"/></li>
+<li><strong>dT</strong> (<em>numpy.ndarray</em>) – Temperature gradient calculated according to SEBAL           (Bastiaanssen et al. 1998) <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>cp</strong> (<em>float</em>) – Thermal heat capacity of dry air <img class="math" src="_images/math/baac15e59e6eca804dd30cc7e9e36500d98b3908.svg" alt="(K.kg^{-1}.K^{-1})"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Sensible heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.fluxLE">
+<code class="descname">fluxLE</code><span class="sig-paren">(</span><em>Rn</em>, <em>G</em>, <em>flux_H</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.fluxLE"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.fluxLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Latent heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Rn</strong> (<em>numpy.ndarray</em>) – Total net radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>G</strong> (<em>numpy.ndarray</em>) – Ground heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>flux_H</strong> (<em>numpy.ndarray</em>) – Sensible heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Latent heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.fluxLE_EQ">
+<code class="descname">fluxLE_EQ</code><span class="sig-paren">(</span><em>Rn</em>, <em>G</em>, <em>delta</em>, <em>gamma</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.fluxLE_EQ"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.fluxLE_EQ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Equilibrium evaporation rate <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Rn</strong> (<em>numpy.ndarray</em>) – Total net radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>G</strong> (<em>numpy.ndarray</em>) – Ground heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>delta</strong> (<em>numpy.ndarray</em>) – Delta function <img class="math" src="_images/math/d793c41ab852eafc4506371b44cd5f0d50ce2ed7.svg" alt="(kPa.K^{-1})"/></li>
+<li><strong>gamma</strong> (<em>numpy.ndarray</em>) – Psychrometric constant <img class="math" src="_images/math/d793c41ab852eafc4506371b44cd5f0d50ce2ed7.svg" alt="(kPa.K^{-1})"/>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Equilibrium evaporation latent heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.fluxLE_PT">
+<code class="descname">fluxLE_PT</code><span class="sig-paren">(</span><em>LE_eq</em>, <em>alpha=1.26</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.fluxLE_PT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.fluxLE_PT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaporation from wet surface according to Priestley-Taylor (1972).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>LE_eq</strong> (<em>numpy.ndarray</em>) – Equilibrium evaporation latent heat flux          <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>alpha</strong> (<em>float</em>) – Priestley-Taylor alpha.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Latent heat flux for wet surface calculated by         Priestley-Taylor <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.fluxLE_p">
+<code class="descname">fluxLE_p</code><span class="sig-paren">(</span><em>Rn</em>, <em>G</em>, <em>delta</em>, <em>VPD</em>, <em>ra</em>, <em>gamma</em>, <em>rho</em>, <em>cp=1012.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.fluxLE_p"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.fluxLE_p" title="Permalink to this definition">¶</a></dt>
+<dd><p>Latent heat flux for potential evapotranspiration according to
+Penman (1948) <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Rn</strong> (<em>numpy.ndarray</em>) – Total net radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>G</strong> (<em>numpy.ndarray</em>) – Ground heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>delta</strong> (<em>numpy.ndarray</em>) – Delta function <img class="math" src="_images/math/d793c41ab852eafc4506371b44cd5f0d50ce2ed7.svg" alt="(kPa.K^{-1})"/></li>
+<li><strong>VPD</strong> (<em>numpy.ndarray</em>) – Water vapour pressure in air (kPa)</li>
+<li><strong>ra</strong> (<em>numpy.ndarray</em>) – Aerodynamic resistance <img class="math" src="_images/math/370352244d2f01b99b605ada38edfd25bdacdd39.svg" alt="(s.m^{-1})"/></li>
+<li><strong>gamma</strong> (<em>numpy.ndarray</em>) – Psychrometric constant <img class="math" src="_images/math/d793c41ab852eafc4506371b44cd5f0d50ce2ed7.svg" alt="(kPa.K^{-1})"/>.</li>
+<li><strong>rho</strong> (<em>numpy.ndarray</em>) – Specific air density <img class="math" src="_images/math/33223e2102dac2b47995a54fe6729f96aa1dbea2.svg" alt="(g.m^{-3})"/></li>
+<li><strong>cp</strong> (<em>float</em>) – Thermal heat capacity of dry air <img class="math" src="_images/math/baac15e59e6eca804dd30cc7e9e36500d98b3908.svg" alt="(K.kg^{-1}.K^{-1})"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Potential evaporation latent heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.fluxLE_ref">
+<code class="descname">fluxLE_ref</code><span class="sig-paren">(</span><em>Rn</em>, <em>G</em>, <em>ta</em>, <em>ts</em>, <em>U</em>, <em>Rh</em>, <em>DMT</em>, <em>veg_type='short'</em>, <em>cp=1012.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.fluxLE_ref"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.fluxLE_ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>Latent heat flux for reference evapotranspiration according to FAO56
+method (Allen et al. 1998, ASCE-ET 2000)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>Rn</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Rn: Total net radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>G</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Ground heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>ta</strong> – Air temperature measured at meteostation at approx. 2 m.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/>
+:type ta: numpy.ndarray, float
+:param ts: Surface temperature measured at meteostation at approx. 2 m.
+<img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/>
+:param U: Wind speed measured at meteostation <img class="math" src="_images/math/50dab5396e36db12cdbb3ed8c451183e12271a2b.svg" alt="(m.s^{-1})"/>
+:type U: numpy.ndarray, float
+:param Rh: Relative humidity (%)
+:type Rh: numpy.ndarray, float
+:param DMT: Digital model of terrain or altitude (m a.s.l.)
+:type DMT: numpy.ndarray, float
+:param veg_type: Type of vegetation - “short” or “tall”
+:type veg_type: str
+:param cp: Thermal heat capacity of dry air <img class="math" src="_images/math/baac15e59e6eca804dd30cc7e9e36500d98b3908.svg" alt="(K.kg^{-1}.K^{-1})"/>
+:type cp: float</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Latent heat flux for reference evapotranspiration.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray, float</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References</strong></p>
+<p><em>Allen, R. et al., 1998. Crop Evapotranspiration: Guidelines for
+Computing Crop Water Requirements. United Nations Food and
+Agriculture Organization, Irrigation and Drainage Paper 56, Rome,
+Italy. 300 pp.</em>
+<a href="#id1"><span class="problematic" id="id2">*</span></a>ASCE-ET 2000: ASCE’s Standardized Reference Evapotranspiration
+Equation. National Irrigation Symposium in Phoenix, Arizona, US.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.gamma_x">
+<code class="descname">gamma_x</code><span class="sig-paren">(</span><em>rcp</em>, <em>ra</em>, <em>gamma</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.gamma_x"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.gamma_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Psychrometric constant corrected on the rcp and ra according to
+Jackson et al. (1981, 1988).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>rcp</strong> (<em>numpy.ndarray</em>) – Surface resistance for water vapour transfer for potential          evapotranspiration <img class="math" src="_images/math/370352244d2f01b99b605ada38edfd25bdacdd39.svg" alt="(s.m^{-1})"/>.</li>
+<li><strong>ra</strong> (<em>numpy.ndarray</em>) – Aerodynamic resistance <img class="math" src="_images/math/370352244d2f01b99b605ada38edfd25bdacdd39.svg" alt="(s.m^{-1})"/></li>
+<li><strong>gamma</strong> (<em>numpy.ndarray</em>) – Psychrometric constant <img class="math" src="_images/math/d793c41ab852eafc4506371b44cd5f0d50ce2ed7.svg" alt="(kPa.K^{-1})"/>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Psychrometric constant corrected on the rcp and ra             according to Jackson et al. (1981, 1988) <img class="math" src="_images/math/d793c41ab852eafc4506371b44cd5f0d50ce2ed7.svg" alt="(kPa.K^{-1})"/>..</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.gradEF">
+<code class="descname">gradEF</code><span class="sig-paren">(</span><em>ts</em>, <em>ta</em>, <em>mask=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.gradEF"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.gradEF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaporative fraction calculated from gradient method according
+to Suleiman and Crago (2004).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ts</strong> (<em>numpy.ndarray</em>) – Surface temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>ta</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Air temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>mask</strong> – Mask of the area of interest. Number of rows and columns</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>should be the same.  Format (1, 0) or (1, nan).
+:type mask: numpy.ndarray</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Evaporative fraction (rel.)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.gradH">
+<code class="descname">gradH</code><span class="sig-paren">(</span><em>LE</em>, <em>Rn</em>, <em>G</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.gradH"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.gradH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sensible heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/> calculated using gradient method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>LE</strong> (<em>numpy.ndarray</em>) – Latent heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>Rn</strong> (<em>numpy.ndarray</em>) – Total net radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>G</strong> (<em>numpy.ndarray</em>) – Ground heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Sensible heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.gradLE">
+<code class="descname">gradLE</code><span class="sig-paren">(</span><em>EF</em>, <em>Rn</em>, <em>G</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.gradLE"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.gradLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Latent heat flux calculated using gradient method <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>EF</strong> – Evaporative fraction (rel.)</li>
+<li><strong>Rn</strong> (<em>numpy.ndarray</em>) – Total net radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>G</strong> (<em>numpy.ndarray</em>) – Ground heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Latent heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.groundFlux">
+<code class="descname">groundFlux</code><span class="sig-paren">(</span><em>ndvi</em>, <em>Rn</em>, <em>ts</em>, <em>albedo</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.groundFlux"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.groundFlux" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ground heat flux according to Bastiaanssen et al. (1998)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ndvi</strong> (<em>numpy.ndarray</em>) – NDVI spectral vegetation index (unitless)</li>
+<li><strong>Rn</strong> (<em>numpy.ndarray</em>) – Total net radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>ts</strong> (<em>numpy.ndarray</em>) – Surface temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>albedo</strong> (<em>numpy.ndarray</em>) – Albedo (rel.)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Ground heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.heatFluxes">
+<code class="descname">heatFluxes</code><span class="sig-paren">(</span><em>Rn</em>, <em>G</em>, <em>ts</em>, <em>ta</em>, <em>method='aero'</em>, <em>Uz=None</em>, <em>h_eff=None</em>, <em>LAI=None</em>, <em>z0m=None</em>, <em>z0h=None</em>, <em>rho=None</em>, <em>disp=None</em>, <em>mask=None</em>, <em>air_pressure=101.3</em>, <em>Z=200.0</em>, <em>cp=1012</em>, <em>L=-10000.0</em>, <em>n_iter=10</em>, <em>a=1.0</em>, <em>b=0.667</em>, <em>c=5.0</em>, <em>d=0.35</em>, <em>kappa=0.41</em>, <em>gravit=9.81</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.heatFluxes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.heatFluxes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function provides a calculation for heat fluxes, aerodynimc
+resistance of surface and friction velocity for three different
+methods:                        1. “aero” - Aerodynamic method based on Monin-Obukhov theory                    2. “sebal” - Method based on SEBAL approach provided by</p>
+<blockquote>
+<div><p>Bastiaanssen et al.</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param disp:</th><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name">param Rn:</th><td class="field-body"><p class="first">Total net radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type Rn:</th><td class="field-body"><p class="first">numpy.ndarray</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param G:</th><td class="field-body"><p class="first">Ground heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type G:</th><td class="field-body"><p class="first">numpy.ndarray</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param ts:</th><td class="field-body"><p class="first">Surface temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type ts:</th><td class="field-body"><p class="first">numpy.ndarray</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param ta:</th><td class="field-body"><p class="first">Air temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type ta:</th><td class="field-body"><p class="first">numpy.ndarray, float</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param method:</th><td class="field-body"><p class="first">Method of heat fluxes calculation:</p>
+<ul class="simple">
+<li>aero - Aerodynamic method based on  calculation</li>
+</ul>
+<p>of ra using approach proposed by Thom (1975)</p>
+<ul class="simple">
+<li>SEBAL - SEBAL method proposed by Bastiaanssen et al. (1998)</li>
+<li>grad - Gradient method proposed by Suleiman and Crago (2004)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type method:</th><td class="field-body"><p class="first">str</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param Uz:</th><td class="field-body"><p class="first">Wind speed measured on meteostation at level Z_st <img class="math" src="_images/math/50dab5396e36db12cdbb3ed8c451183e12271a2b.svg" alt="(m.s^{-1})"/>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type Uz:</th><td class="field-body"><p class="first">float, numpy.ndarray</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param h_eff:</th><td class="field-body"><p class="first">Effective height of vegetation cover</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type h_eff:</th><td class="field-body"><p class="first">numpy.ndarray, float</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param LAI:</th><td class="field-body"><p class="first">Leaf area index <img class="math" src="_images/math/7ff384f7bedae06a9394e177837ab99dabc109c2.svg" alt="(m^{2}.m^{-2})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param z0m:</th><td class="field-body"><p class="first last">Aerodynamic roughness of the surface for momentum</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>transfer (m)
+:type z0m: numpy.ndarray
+:param z0h: Aerodynamic roughness of the surface for heat
+transfer (m)
+:type z0h: numpy.ndarray
+:param rho: Volumetric dry air density <img class="math" src="_images/math/d74d01a8b897e6644811740bd76f0fdd44a2fa95.svg" alt="(kg.m^{-3})"/>
+:type rho: numpy.ndarray, float
+:param disp: Zero plane displacement (m)
+:type disp: numpy.ndarray, float
+:param mask: Mask of the area of interest. Number of rows
+and columns should be the same.  Format (1, 0) or (1, nan).
+:type mask: numpy.ndarray
+:param air_pressure: Air pressure  at level Z (kPa)
+:type air_pressure: float, numpy.ndarray
+:param Z: Blending height (m)
+:type Z: float
+:param cp: Thermal heat capacity of dry air <img class="math" src="_images/math/baac15e59e6eca804dd30cc7e9e36500d98b3908.svg" alt="(K.kg^{-1}.K^{-1})"/>
+:type cp: float
+:param L: Initial Monin-Obukhov lenght (m).
+:type L: float
+:param n_iter: Number of iteration in stability coefficient calculation.
+:type n_iter: int
+:param a: Constant for stability parameters calculation (Beljaars and
+Holtslag, 1991)
+:type a: float
+:param b: Constant for stability parameters calculation (Beljaars and
+Holtslag, 1991)
+:type b: float
+:param c: Constant for stability parameters calculation (Beljaars and
+Holtslag, 1991)
+:type c: float
+:param d: Constant for stability parameters calculation (Beljaars and
+Holtslag, 1991)
+:type d: float
+:param kappa: von Karman constant. Default 0.41
+:type kappa: float
+:param gravit: Gravitation forcing (m/s2). Default 9.81
+:type gravit: float</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Sensible heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Latent heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Evaporative fraction (rel.)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Latent heat flux for equilibrium evaporation :math:<a href="#id3"><span class="problematic" id="id4">`</span></a>(W.m^{</td>
+</tr>
+</tbody>
+</table>
+<p>-2})`
+:rtype: numpy.ndarray
+:returns: Latent heat flux for Priestley-Taylor evaporation <img class="math" src="_images/math/2dfc34d7fef6c3a0bc895b13d436bbc4df0f9609.svg" alt="(
+W.m^{-2})"/>
+:rtype: numpy.ndarray
+:returns: Aerodynamic resistance for heat and momentum transfer <img class="math" src="_images/math/6bcd3fb657da1fff4dc029e0d8a8d2a28c64de40.svg" alt="(
+s.m^{-1})"/>
+:rtype: numpy.ndarray
+:returns: Friction velocity <img class="math" src="_images/math/50dab5396e36db12cdbb3ed8c451183e12271a2b.svg" alt="(m.s^{-1})"/></p>
+<p><strong>References</strong></p>
+<p><em>Bastiaanssen, W.G.M., Menenti, M., Feddes, R.A., Holtslag, A.A.M.,
+1998. A remote sensing surface energy balance algorithm for land (
+SEBAL). 1. Formulation. Journal of Hydrology 212–213, 198–212.
+https://doi.org/10.1016/S0022-1694(98)00253-4</em></p>
+<p><em>Beljaars, A.C.M., Holtslag, A.A.M., 1991. Flux Parametrization over
+Land Surfaces for Atmospheric Models. Journal of Applied Meteorology
+30, 327–341. https://doi.org/10.1175/1520-0450(
+1991)030&lt;0327:FPOLSF&gt;2.0.CO;2</em></p>
+<p><em>Suleiman, A., Crago, R., 2004. Hourly and Daytime Evapotranspiration
+from Grassland Using Radiometric Surface Temperatures. Agronomy
+Journal 96, 384–390. https://doi.org/10.2134/agronj2004.3840</em></p>
+<p><em>Thom, A.S., 1975. Momentum, mass and heat exchange of plant
+communities, in: Monteith, J.L. (Ed.), Vegetation and the Atmosphere,
+Vol. 1 Principles. Academic Press, London, pp. 57–110.</em></p>
+</div></blockquote>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.intensityE">
+<code class="descname">intensityE</code><span class="sig-paren">(</span><em>LE</em>, <em>latent</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.intensityE"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.intensityE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaporation intensity in <img class="math" src="_images/math/6ece102dce37047cba33551d30bed1123f73b8b2.svg" alt="mmol.m^{-2}.s^{-1}"/>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>LE</strong> (<em>numpy.ndarray</em>) – Latent heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>latent</strong> (<em>numpy.ndarray</em>) – Latent heat of water evaporation <img class="math" src="_images/math/bc5170d1383e54dea8d7afbf52cd6ce1b55b6cb3.svg" alt="(J.g^{-1})"/>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Intensity of water evaporation <img class="math" src="_images/math/dd83e53b56370f541d6f58f4461298d1560a2f85.svg" alt="(mmol.m^{-2}.s^{-1})"/>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.omega">
+<code class="descname">omega</code><span class="sig-paren">(</span><em>LE</em>, <em>LE_p</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.omega"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.omega" title="Permalink to this definition">¶</a></dt>
+<dd><p>Omega factor (Decoupling coefficient) according to Jarvis and
+McNaughton (1985)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>LE</strong> (<em>numpy.ndarray</em>) – Latent heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>LE_p</strong> (<em>numpy.ndarray</em>) – Potential evaporation latent heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Omega factor (unitless)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References:</strong></p>
+<p><em>Jarvis, P., McNaughton, K., 1986. Stomatal Control of Transpiration:
+Scaling Up from Leaf to Region, in: Advances in Ecological Research.
+Elsevier, pp. 1–49.</em></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.rcp">
+<code class="descname">rcp</code><span class="sig-paren">(</span><em>E_Z_sat</em>, <em>e_Z</em>, <em>rho</em>, <em>LE_p</em>, <em>ra</em>, <em>gamma</em>, <em>cp=1012.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.rcp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.rcp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface resistance for water vapour transfer for potential
+evapotranspiration <img class="math" src="_images/math/370352244d2f01b99b605ada38edfd25bdacdd39.svg" alt="(s.m^{-1})"/>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>E_Z_sat</strong> (<em>numpy.ndarray</em>) – Saturated water vapour pressure (kPa).</li>
+<li><strong>e_Z</strong> (<em>numpy.ndarray</em>) – Water vapour pressure (kPa).</li>
+<li><strong>rho</strong> (<em>numpy.ndarray</em>) – Specific air density <img class="math" src="_images/math/33223e2102dac2b47995a54fe6729f96aa1dbea2.svg" alt="(g.m^{-3})"/></li>
+<li><strong>LE_p</strong> (<em>numpy.ndarray</em>) – Potential evaporation latent heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>ra</strong> (<em>numpy.ndarray</em>) – Aerodynamic resistance <img class="math" src="_images/math/370352244d2f01b99b605ada38edfd25bdacdd39.svg" alt="(s.m^{-1})"/></li>
+<li><strong>gamma</strong> (<em>numpy.ndarray</em>) – Psychrometric constant <img class="math" src="_images/math/d793c41ab852eafc4506371b44cd5f0d50ce2ed7.svg" alt="(kPa.K^{-1})"/>.</li>
+<li><strong>cp</strong> (<em>float</em>) – Thermal heat capacity of dry air <img class="math" src="_images/math/baac15e59e6eca804dd30cc7e9e36500d98b3908.svg" alt="(K.kg^{-1}.K^{-1})"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Surface resistance for water vapour transfer for potential             evapotranspiration <img class="math" src="_images/math/370352244d2f01b99b605ada38edfd25bdacdd39.svg" alt="(s.m^{-1})"/>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.HeatFluxes.rs">
+<code class="descname">rs</code><span class="sig-paren">(</span><em>delta</em>, <em>gamma</em>, <em>omega</em>, <em>ra</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#HeatFluxes.rs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.HeatFluxes.rs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface resistance for water vapour transfer <img class="math" src="_images/math/370352244d2f01b99b605ada38edfd25bdacdd39.svg" alt="(s.m^{-1})"/></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>delta</strong> (<em>numpy.ndarray</em>) – Delta function <img class="math" src="_images/math/d793c41ab852eafc4506371b44cd5f0d50ce2ed7.svg" alt="(kPa.K^{-1})"/></li>
+<li><strong>gamma</strong> (<em>numpy.ndarray</em>) – Psychrometric constant <img class="math" src="_images/math/d793c41ab852eafc4506371b44cd5f0d50ce2ed7.svg" alt="(kPa.K^{-1})"/>.</li>
+<li><strong>omega</strong> (<em>numpy.ndarray</em>) – Decoupling coefficient (rel.)</li>
+<li><strong>ra</strong> (<em>numpy.ndarray</em>) – Aerodynamic resistance <img class="math" src="_images/math/370352244d2f01b99b605ada38edfd25bdacdd39.svg" alt="(s.m^{-1})"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Surface resistance for water vapour transfer <img class="math" src="_images/math/370352244d2f01b99b605ada38edfd25bdacdd39.svg" alt="(s.m^{-1})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="SEBCS_lib.MeteoFeatures">
+<em class="property">class </em><code class="descclassname">SEBCS_lib.</code><code class="descname">MeteoFeatures</code><a class="reference internal" href="_modules/SEBCS_lib.html#MeteoFeatures"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.MeteoFeatures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculation of basic meteorological features and miscellaneous
+variables.</p>
+<dl class="method">
+<dt id="SEBCS_lib.MeteoFeatures.airDensity">
+<code class="descname">airDensity</code><span class="sig-paren">(</span><em>ta</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#MeteoFeatures.airDensity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.MeteoFeatures.airDensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volumetric dry air density <img class="math" src="_images/math/d74d01a8b897e6644811740bd76f0fdd44a2fa95.svg" alt="(kg.m^{-3})"/>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ta</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Air temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Volumetric dry air density <img class="math" src="_images/math/d74d01a8b897e6644811740bd76f0fdd44a2fa95.svg" alt="(kg.m^{-3})"/></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray, float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.MeteoFeatures.airPress">
+<code class="descname">airPress</code><span class="sig-paren">(</span><em>ta</em>, <em>DMT</em>, <em>Z=200.0</em>, <em>P0=101.325</em>, <em>adiabatic=0.0065</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#MeteoFeatures.airPress"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.MeteoFeatures.airPress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Atmospheric air pressure at level Z (kPa)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ta</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Air temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>DMT</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Digital elevation model or altitude (m)</li>
+<li><strong>Z</strong> (<em>float</em>) – Height of measurement above surface (m)</li>
+<li><strong>P0</strong> (<em>float</em>) – Sea level air pressure (kPa)</li>
+<li><strong>adiabatic</strong> (<em>float</em>) – Adiabatic lapse rate <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Air pressure at level Z (kPa)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray, float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.MeteoFeatures.airTemp">
+<code class="descname">airTemp</code><span class="sig-paren">(</span><em>ta_st</em>, <em>st_altitude</em>, <em>DMT</em>, <em>adiabatic=0.0065</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#MeteoFeatures.airTemp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.MeteoFeatures.airTemp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Conversion of air temperature calculated from temperature data and
+digital elevation model <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/> to spatial
+near to ground temperature or temperature at different altitude.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ta_st</strong> – Air temperature measured on meteostation :math:<a href="#id5"><span class="problematic" id="id6">`</span></a>(SI{</td>
+</tr>
+</tbody>
+</table>
+<p>}degreeCelsius)`
+:type ta_st: float
+:param st_altitude: Meteostation altitude (m a.s.l.)
+:type st_altitude: float
+:param DMT: Digital elevation model (m) or altitude for calculation
+of ta value.
+:type DMT: numpy.ndarray, float
+:param adiabatic: Adiabatic lapse rate <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/>.
+Default = 0.0065 <img class="math" src="_images/math/628cb99faf4878a11a2a0aecfde3ecbea4f58fd5.svg" alt="\SI{}\degreeCelsius.m^{-1}"/>
+:type adiabatic: float
+:return: Spatial air temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/>
+:rtype: numpy.ndarray, float</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.MeteoFeatures.airTemperatureBlending">
+<code class="descname">airTemperatureBlending</code><span class="sig-paren">(</span><em>ta_surface</em>, <em>Z=200.0</em>, <em>Z_st=2.0</em>, <em>adiabatic=0.0065</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#MeteoFeatures.airTemperatureBlending"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.MeteoFeatures.airTemperatureBlending" title="Permalink to this definition">¶</a></dt>
+<dd><p>Conversion of spatial air temperature measured for near surface
+level to level Z above the surface. This approach is usually used
+for calculation of air temperature at blending height (mixing layer).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ta_surface</strong> – Spatial air temperature for near ground level (</td>
+</tr>
+</tbody>
+</table>
+<p>Z_st; <img class="math" src="_images/math/75cd7771ec0ff2fae7cb933fa53bdd504571670e.svg" alt="\SI{}\degreeCelsius)"/>
+:type ta_surface:
+:param Z: Height of a level which is used for calculation. Default
+value corresponds with “blending” height or height of mixing layer.
+Default is 200 m above surface.
+:type Z: float
+:param Z_st: Height of air temperature measurement (m)
+:type Z_st: float
+:param adiabatic: Adiabatic lapse rate <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/>.
+Default = 0.0065 <img class="math" src="_images/math/628cb99faf4878a11a2a0aecfde3ecbea4f58fd5.svg" alt="\SI{}\degreeCelsius.m^{-1}"/>
+:type adiabatic: float
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.MeteoFeatures.delta">
+<code class="descname">delta</code><span class="sig-paren">(</span><em>ts</em>, <em>ta</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#MeteoFeatures.delta"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.MeteoFeatures.delta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slope of water vapour pressure gradient to temperature gradient - delta
+function <img class="math" src="_images/math/d793c41ab852eafc4506371b44cd5f0d50ce2ed7.svg" alt="(kPa.K^{-1})"/>. Calculation according to Jackson et
+al. (1998).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ts</strong> (<em>numpy.ndarray</em>) – Surface temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>ta</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Air temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Slope of water vapour pressure gradient to temperature         gradient - delta function <img class="math" src="_images/math/d793c41ab852eafc4506371b44cd5f0d50ce2ed7.svg" alt="(kPa.K^{-1})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.MeteoFeatures.emissivity">
+<code class="descname">emissivity</code><span class="sig-paren">(</span><em>red</em>, <em>ndvi</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#MeteoFeatures.emissivity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.MeteoFeatures.emissivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface emissivity calculated according to Sobrino et al. (2004) NDVI
+Treshold Method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>red</strong> (<em>numpy.ndarray</em>) – Spectral reflectance in RED region (rel.)</li>
+<li><strong>ndvi</strong> (<em>numpy.ndarray</em>) – Spectral vegetation index NDVI (unitless)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Surface emissivity (rel.)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.MeteoFeatures.gamma">
+<code class="descname">gamma</code><span class="sig-paren">(</span><em>airP</em>, <em>latent</em>, <em>cp=1012.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#MeteoFeatures.gamma"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.MeteoFeatures.gamma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Psychrometric constant <img class="math" src="_images/math/d793c41ab852eafc4506371b44cd5f0d50ce2ed7.svg" alt="(kPa.K^{-1})"/>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>airP</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Atmospheric pressure (kPa)</li>
+<li><strong>latent</strong> – Latent heat for water vapour exchange <img class="math" src="_images/math/bc5170d1383e54dea8d7afbf52cd6ce1b55b6cb3.svg" alt="(J.g^{-1})"/></li>
+<li><strong>cp</strong> (<em>float</em>) – Thermal heat capacity of dry air <img class="math" src="_images/math/baac15e59e6eca804dd30cc7e9e36500d98b3908.svg" alt="(K.kg^{-1}.K^{-1})"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Psychrometric constant <img class="math" src="_images/math/d793c41ab852eafc4506371b44cd5f0d50ce2ed7.svg" alt="(kPa.K^{-1})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray, float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.MeteoFeatures.latent">
+<code class="descname">latent</code><span class="sig-paren">(</span><em>ta</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#MeteoFeatures.latent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.MeteoFeatures.latent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Latent heat for the water vapour exchange <img class="math" src="_images/math/bc5170d1383e54dea8d7afbf52cd6ce1b55b6cb3.svg" alt="(J.g^{-1})"/>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ta</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Air temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Latent heat for the water vapour exchange <img class="math" src="_images/math/bc5170d1383e54dea8d7afbf52cd6ce1b55b6cb3.svg" alt="(J.g^{-1})"/></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray, float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.MeteoFeatures.satVapourPress">
+<code class="descname">satVapourPress</code><span class="sig-paren">(</span><em>ta</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#MeteoFeatures.satVapourPress"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.MeteoFeatures.satVapourPress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saturated water vapour pressure (kPa) calculated using Magnus-Tetens
+equation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ta</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Air temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Saturated water vapour pressure (kPa)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray, float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.MeteoFeatures.surfaceTemperature">
+<code class="descname">surfaceTemperature</code><span class="sig-paren">(</span><em>tir_band</em>, <em>emissivity=1.0</em>, <em>emis_rule='No'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#MeteoFeatures.surfaceTemperature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.MeteoFeatures.surfaceTemperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Correction of surface temperature on emissivity.
+:param tir_band: Layer of surface temperature <div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">(\SI{
+}\degreeCelsius)</tt>)</p>
+latex exited with error
+[stdout]
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex)
+ restricted \write18 enabled.
+entering extended mode
+(./math.tex
+LaTeX2e &lt;2020-02-02&gt; patch level 2
+L3 programming layer &lt;2020-02-14&gt;
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/utf8x.def))
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucs.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvips.def))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator.sty))
+No file math.aux.
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/dvips.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
+-English.dict)
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd))
+Runaway argument?
+\l__siunitx_number_arg_tl \tl_map_function:NN \l__siunitx_number_arg_tl \ETC.
+! File ended while scanning use of \__siunitx_number_in_parse_relation:w.
+&lt;inserted text&gt; 
+                \par 
+&lt;*&gt; math.tex
+            
+! Emergency stop.
+&lt;*&gt; math.tex
+            
+No pages of output.
+Transcript written on math.log.
+</div>
+.
+:type tir_band: numpy.ndarray
+:param emissivity: Layer of emissivity (rel.).
+:type emissivity: numpy.ndarray
+:param emis_rule: Setting if the correction will be done or not.</p>
+<blockquote>
+<div>No is default.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Layer of corrected surface temperature :math:<a href="#id7"><span class="problematic" id="id8">`</span></a>(SI{</td>
+</tr>
+</tbody>
+</table>
+<p>}degreeCelsius)`.
+:rtype: numpy.ndarray</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.MeteoFeatures.vapourPress">
+<code class="descname">vapourPress</code><span class="sig-paren">(</span><em>E_sat</em>, <em>Rh</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#MeteoFeatures.vapourPress"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.MeteoFeatures.vapourPress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Water vapour pressure in air (kPa).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>E_sat</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Saturated water vapour pressure (kPa)</li>
+<li><strong>Rh</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Relative humidity of air (%)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Water vapour pressure in air (kPa)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray, float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.MeteoFeatures.vpd">
+<code class="descname">vpd</code><span class="sig-paren">(</span><em>E_sat</em>, <em>e_abs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#MeteoFeatures.vpd"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.MeteoFeatures.vpd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Water vapour pressure deficit (kPa).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>E_sat</strong> (<em>numpy.array</em><em>, </em><em>float</em>) – Saturated water vapour pressure (kPa)</li>
+<li><strong>e_abs</strong> (<em>numpy.array</em><em>, </em><em>float</em>) – Water vapour pressure in air (kPa)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Water vapour pressure deficit (kPa)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray, float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="SEBCS_lib.SolarRadBalance">
+<em class="property">class </em><code class="descclassname">SEBCS_lib.</code><code class="descname">SolarRadBalance</code><a class="reference internal" href="_modules/SEBCS_lib.html#SolarRadBalance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.SolarRadBalance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class contains functions for calculation of solar radiation balance
+and topographic features: incident radiation in dependence on surface
+geometry, slope of terrain, aspect of terrain, albedo, longwave radiation
+fluxes and atmospheric emissivity, shortwave radiation reflectance
+and total net radiation</p>
+<dl class="method">
+<dt id="SEBCS_lib.SolarRadBalance.albedo">
+<code class="descname">albedo</code><span class="sig-paren">(</span><em>band_red</em>, <em>band_nir</em>, <em>sat_type='L8'</em>, <em>band_blue=None</em>, <em>band_green=None</em>, <em>band_sw1=None</em>, <em>band_sw2=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#SolarRadBalance.albedo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.SolarRadBalance.albedo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculation of Albedo according to data type (satellite data type)
+or data availability. Albedo can be calculated using Landsat data 
+or using any data including RED and NIR band. For the Landsat 8 data 
+Olmedo method is used, for tle Landsat 4, 5 and 7 Tasumi approach is 
+used. If only RED and NIR bands are available, Brom method is used.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>band_red</strong> (<em>numpy.ndarray</em>) – Red band (rel.)</li>
+<li><strong>band_nir</strong> (<em>numpy.ndarray</em>) – NIR band (rel.)</li>
+<li><strong>sat_type</strong> (<em>str</em>) – <p>Type of Landsat satellite:</p>
+<ul>
+<li>L5 - Landsat 4 TM, 5 TM or Landsat 7 ETM+</li>
+<li>L8 - Landsat 8 OLI/TIRS</li>
+</ul>
+</li>
+<li><strong>band_blue</strong> (<em>numpy.ndarray</em>) – Blue band (rel.)</li>
+<li><strong>band_green</strong> (<em>numpy.ndarray</em>) – Green band (rel.)</li>
+<li><strong>band_sw1</strong> (<em>numpy.ndarray</em>) – SWIR1 band on ca 1.61 <img class="math" src="_images/math/f83f3b3010496f841eb425f01cba78cb9c6b71e2.svg" alt="\mu m"/> (rel.)</li>
+<li><strong>band_sw2</strong> (<em>numpy.ndarray</em>) – SWIR2 band on ca 2.2 <img class="math" src="_images/math/f83f3b3010496f841eb425f01cba78cb9c6b71e2.svg" alt="\mu m"/> (rel.)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Albedo (rel.)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References:</strong></p>
+<p><em>G.F. Olmedo, S. Ortega-Farias, D. Fonseca-Luengo,
+D. de la Fuente-Saiz, F.F. Peñailillo 2018: Water: actual
+evapotranspiration with energy balance models. R Package
+Version 0.6 (2017)</em></p>
+<p><em>Tasumi, M., Allen, R.G., Trezza, R., 2008. At-Surface Reflectance
+and Albedo from Satellite for Operational Calculation of Land
+Surface Energy Balance. Journal of Hydrologic Engineering 13, 51–63.
+https://doi.org/10.1061/(ASCE)1084-0699(2008)13:2(51).</em></p>
+<p><em>Duffková, R., Brom, J., Žížala, D., Zemek, F., Procházka, J.,
+Nováková, E., Zajíček, A., Kvítek, T., 2012. Určení infiltračních
+oblastí pomocí vodního stresu vegetace na základě dálkového průzkumu
+Země a pozemních měření. Certifikovaná metodika. VÚMOP, v.v.i., Praha.</em></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.SolarRadBalance.albedoBrom">
+<code class="descname">albedoBrom</code><span class="sig-paren">(</span><em>ndvi</em>, <em>msavi</em>, <em>c_a=0.08611</em>, <em>c_b=0.894716</em>, <em>c_c=5.558657</em>, <em>c_d=-0.11829</em>, <em>c_e=-1.9818</em>, <em>c_f=-4.50339</em>, <em>c_g=-11.4625</em>, <em>c_h=7.461454</em>, <em>c_i=5.299396</em>, <em>c_j=4.76657</em>, <em>c_k=-2.3127</em>, <em>c_l=-3.42739</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#SolarRadBalance.albedoBrom"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.SolarRadBalance.albedoBrom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Albedo (rel.) calculated according to Duffková and Brom et al. (2012)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ndvi</strong> (<em>numpy.array</em>) – Normalized Difference Vegetation Index (-)</li>
+<li><strong>msavi</strong> – Modified Soil Adjusted Vegetation Index (-) according             to Gao et al. 1996.</li>
+<li><strong>c_a</strong> (<em>float</em>) – constant. Default a = 0.08611</li>
+<li><strong>c_b</strong> (<em>float</em>) – constant. Default a = 0.894716</li>
+<li><strong>c_c</strong> (<em>float</em>) – constant. Default a = 5.558657</li>
+<li><strong>c_d</strong> (<em>float</em>) – constant. Default a = -0.11829</li>
+<li><strong>c_e</strong> (<em>float</em>) – constant. Default a = -1.9818</li>
+<li><strong>c_f</strong> (<em>float</em>) – constant. Default a = -4.50339</li>
+<li><strong>c_g</strong> (<em>float</em>) – constant. Default a = -11.4625</li>
+<li><strong>c_h</strong> (<em>float</em>) – constant. Default a = 7.461454</li>
+<li><strong>c_i</strong> (<em>float</em>) – constant. Default a = 5.299396</li>
+<li><strong>c_j</strong> (<em>float</em>) – constant. Default a = 4.76657</li>
+<li><strong>c_k</strong> (<em>float</em>) – constant. Default a = -2.3127</li>
+<li><strong>c_l</strong> (<em>float</em>) – constant. Default a = -3.42739</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Albedo (rel.)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References:</strong></p>
+<p><em>Duffková, R., Brom, J., Žížala, D., Zemek, F., Procházka, J.,
+Nováková, E., Zajíček, A., Kvítek, T., 2012. Určení infiltračních
+oblastí pomocí vodního stresu vegetace na základě dálkového průzkumu
+Země a pozemních měření. Certifikovaná metodika. VÚMOP, v.v.i., Praha.</em></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.SolarRadBalance.albedoLandsat">
+<code class="descname">albedoLandsat</code><span class="sig-paren">(</span><em>blue</em>, <em>green</em>, <em>red</em>, <em>nir</em>, <em>swir1</em>, <em>swir2</em>, <em>sat_type='L8'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#SolarRadBalance.albedoLandsat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.SolarRadBalance.albedoLandsat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Albedo (rel.) calculated for Landsat satellite sensors. Albedo
+for Landsat 4 TM, 5 TM and Landsat 7 ETM+ is calculated
+according to Tasumi et al. (2008). Albedo for Landsat 8 OLI/TIRS
+is calculated according to Olmeo et al. (2017). Albedo is computed
+with spectral reflectance bands on relative scale (0 to 1).</p>
+<p>Note: This algorithm might be used with another data from different
+devices, however a comparable spectral data (bands) should be used.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>blue</strong> (<em>numpy.ndarray</em>) – Blue band (rel.)</li>
+<li><strong>green</strong> (<em>numpy.ndarray</em>) – Green band (rel.)</li>
+<li><strong>red</strong> (<em>numpy.ndarray</em>) – Red band (rel.)</li>
+<li><strong>nir</strong> (<em>numpy.ndarray</em>) – NIR band (rel.)</li>
+<li><strong>swir1</strong> (<em>numpy.ndarray</em>) – SWIR1 band on ca 1.61 <img class="math" src="_images/math/f83f3b3010496f841eb425f01cba78cb9c6b71e2.svg" alt="\mu m"/> (rel.)</li>
+<li><strong>swir2</strong> (<em>numpy.ndarray</em>) – SWIR2 band on ca 2.2 <img class="math" src="_images/math/f83f3b3010496f841eb425f01cba78cb9c6b71e2.svg" alt="\mu m"/> (rel.)</li>
+<li><strong>sat_type</strong> (<em>str</em>) – <p>Type of Landsat satellite:</p>
+<ul>
+<li>L5 - Landsat 4 TM, 5 TM or Landsat 7 ETM+</li>
+<li>L8 - Landsat 8 OLI/TIRS</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Albedo (rel.)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References:</strong></p>
+<p><em>G.F. Olmedo, S. Ortega-Farias, D. Fonseca-Luengo,
+D. de la Fuente-Saiz, F.F. Peñailillo 2018: Water: actual
+evapotranspiration with energy balance models. R Package
+Version 0.6 (2017)</em></p>
+<p><em>Tasumi, M., Allen, R.G., Trezza, R., 2008. At-Surface Reflectance
+and Albedo from Satellite for Operational Calculation of Land
+Surface Energy Balance. Journal of Hydrologic Engineering 13, 51–63.</em>
+<a class="reference external" href="https://doi.org/10.1061/(ASCE)1084-0699(2008)13:2(51">https://doi.org/10.1061/(ASCE)1084-0699(2008)13:2(51</a>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.SolarRadBalance.atmEmissivity">
+<code class="descname">atmEmissivity</code><span class="sig-paren">(</span><em>e_Z</em>, <em>ta</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#SolarRadBalance.atmEmissivity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.SolarRadBalance.atmEmissivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Atmospheric emissivity calculated according to Idso (see
+Brutsaert 1982).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>e_Z</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Atmospheric water vapour pressure (kPa)</li>
+<li><strong>ta</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Air temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Air emissivity (rel.)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray, float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.SolarRadBalance.downRL">
+<code class="descname">downRL</code><span class="sig-paren">(</span><em>ta</em>, <em>emis_a</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#SolarRadBalance.downRL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.SolarRadBalance.downRL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Funtion calculates downward flux of longwave radiation <img class="math" src="_images/math/bfce6931ab405789038f1055cdacb88e15c3f3c4.svg" alt="(W.m^{
+-2})"/></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ta</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Air temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>emis_a</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Air emissivity (rel.)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return RL_in:</th><td class="field-body"><p class="first">Downward flux of longwave radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Rtype RL_in:</th><td class="field-body"><p class="first last">numpy.ndarray, float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.SolarRadBalance.netRad">
+<code class="descname">netRad</code><span class="sig-paren">(</span><em>Rs_in_corr</em>, <em>Rs_out</em>, <em>RL_in</em>, <em>RL_out</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#SolarRadBalance.netRad"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.SolarRadBalance.netRad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Total net radiation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Rs_in_corr</strong> (<em>numpy.ndarray</em>) – Incomming global (shortwave) radiation               <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>Rs_out</strong> (<em>numpy.ndarray</em>) – Outgoing (reflected) shortwave radiation         <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>RL_in</strong> (<em>numpy.ndarray</em>) – Incomming (downward) longwave radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>RL_out</strong> (<em>numpy.ndarray</em>) – Outgoing (upward) longwave radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Total net radiation flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.SolarRadBalance.outRL">
+<code class="descname">outRL</code><span class="sig-paren">(</span><em>ts</em>, <em>emiss</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#SolarRadBalance.outRL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.SolarRadBalance.outRL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upward flux of longwave radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ts</strong> (<em>numpy.ndarray</em>) – Surface temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>emiss</strong> (<em>numpy.ndarray</em>) – Surface emissivity (rel.)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Upward flux of longwave radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.SolarRadBalance.reflectRs">
+<code class="descname">reflectRs</code><span class="sig-paren">(</span><em>Rs_in_corr</em>, <em>albedo</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#SolarRadBalance.reflectRs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.SolarRadBalance.reflectRs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amount of shortwave radiation reflected from surface <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Rs_in_corr</strong> (<em>numpy.ndarray</em>) – Incomming global radiation corrected on DEM          <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>albedo</strong> (<em>numpy.ndarray</em>) – Surface albedo (rel.)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Amount of reflected global radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.SolarRadBalance.slopeAspect">
+<code class="descname">slopeAspect</code><span class="sig-paren">(</span><em>DMT</em>, <em>x_size</em>, <em>y_size</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#SolarRadBalance.slopeAspect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.SolarRadBalance.slopeAspect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slope and aspect of terrain (DMT) in degrees.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>DMT</strong> (<em>numpy.ndarray</em>) – Digital model of terrain (m a.s.l.)</li>
+<li><strong>x_size</strong> (<em>float</em>) – Size of pixel in x axis (m)</li>
+<li><strong>y_size</strong> (<em>float</em>) – Size of pixel in y axis (m)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Slope of the terrain <img class="math" src="_images/math/69ded0252d9cd760d6163745a3a40fe2d26d79c4.svg" alt="(\SI{}\degree)"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">numpy.ndarray</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Aspect of the terrain <img class="math" src="_images/math/69ded0252d9cd760d6163745a3a40fe2d26d79c4.svg" alt="(\SI{}\degree)"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.SolarRadBalance.solarInTopo">
+<code class="descname">solarInTopo</code><span class="sig-paren">(</span><em>Rs_in</em>, <em>slope</em>, <em>aspect</em>, <em>latitude</em>, <em>longitude</em>, <em>date_acq</em>, <em>time_acq</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#SolarRadBalance.solarInTopo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.SolarRadBalance.solarInTopo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculation of incident shortwave solar radiation flux
+according to the solar geometry, position (latitude
+and longitude) and shape of surface (slope and orientation).
+Flux of the solar energy <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/> is calculated on basis
+of the measured global radiation using pyranometer (incomming
+global radiation). Diffuse part of radiation is not separated
+in calculation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Rs_in</strong> (<em>float</em>) – Global radiation measured by pyranometer          <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/>.</li>
+<li><strong>slope</strong> (<em>numpy.ndarray</em>) – Slope of the terrain <img class="math" src="_images/math/69ded0252d9cd760d6163745a3a40fe2d26d79c4.svg" alt="(\SI{}\degree)"/>.</li>
+<li><strong>aspect</strong> (<em>numpy.ndarray</em>) – Orientation of the terrain <img class="math" src="_images/math/69ded0252d9cd760d6163745a3a40fe2d26d79c4.svg" alt="(\SI{}\degree)"/>.</li>
+<li><strong>latitude</strong> (<em>float</em>) – Mean latitude of the data in decimal degrees</li>
+<li><strong>longitude</strong> (<em>float</em>) – Mean longitude of the data in decimal degrees</li>
+<li><strong>date_acq</strong> (<em>datetime.date</em>) – Date of data acquisition in iso format (‘YYYY-mm-dd’)</li>
+<li><strong>time_acq</strong> (<em>datetime.time</em>) – Time in GMT in datetime.time format (‘HH:MM:SS.SS’)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Incident shortwave radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/> corrected             on the terrain and solar geometry.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="SEBCS_lib.VegIndices">
+<em class="property">class </em><code class="descclassname">SEBCS_lib.</code><code class="descname">VegIndices</code><a class="reference internal" href="_modules/SEBCS_lib.html#VegIndices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.VegIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculation of vegetation indices from spectral data.</p>
+<dl class="method">
+<dt id="SEBCS_lib.VegIndices.LAI">
+<code class="descname">LAI</code><span class="sig-paren">(</span><em>red</em>, <em>nir</em>, <em>method=3</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#VegIndices.LAI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.VegIndices.LAI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Leaf Area Index (LAI) calculated according to several methods.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>red</strong> (<em>numpy.ndarray</em>) – Spectral reflectance in RED region (rel.)</li>
+<li><strong>nir</strong> (<em>numpy.ndarray</em>) – Spectral reflectance in NIR region (rel.)</li>
+<li><strong>method</strong> (<em>int</em>) – <p>Method of LAI calculation:</p>
+<ul>
+<li>1: Pôças</li>
+<li>2: Bastiaanssen</li>
+<li>3: Jafaar (default)</li>
+<li>4: Anderson</li>
+<li>5: vineyard</li>
+<li>6: Carrasco</li>
+<li>7: Turner</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Leaf Area Index (LAI) <img class="math" src="_images/math/9ad11d5ab7022d12ba4412d61afacaa7b41e25eb.svg" alt="(m^2.m^{-2})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References</strong></p>
+<p><em>Anderson, M., Neale, C., Li, F., Norman, J., Kustas, W., Jayanthi,
+H., Chavez, J., 2004. Upscaling ground observations of vegetation
+water content, canopy height, and leaf area index during SMEX02 using
+aircraft and Landsat imagery. Remote Sensing of Environment 92,
+447–464. https://doi.org/10.1016/j.rse.2004.03.019</em></p>
+<p><em>Bastiaanssen, W.G.M., Menenti, M., Feddes, R.A., Holtslag, A.A.M.,
+1998. A remote sensing surface energy balance algorithm for land (
+SEBAL). 1. Formulation. Journal of Hydrology 212–213, 198–212.
+https://doi.org/10.1016/S0022-1694(98)00253-4</em></p>
+<p><em>Carrasco-Benavides, M., Ortega-Farías, S., Lagos, L., Kleissl, J.,
+Morales-Salinas, L., Kilic, A., 2014. Parameterization of the
+Satellite-Based Model (METRIC) for the Estimation of Instantaneous
+Surface Energy Balance Components over a Drip-Irrigated Vineyard.
+Remote Sensing 6, 11342–11371. https://doi.org/10.3390/rs61111342</em></p>
+<p><em>Jaafar, H.H., Ahmad, F.A., 2019. Time series trends of Landsat-based
+ET using automated calibration in METRIC and SEBAL: The Bekaa
+Valley, Lebanon. Remote Sensing of Environment S0034425718305947.
+https://doi.org/10.1016/j.rse.2018.12.033</em></p>
+<p><em>Pôças, I., Paço, T.A., Cunha, M., Andrade, J.A., Silvestre, J.,
+Sousa, A., Santos, F.L., Pereira, L.S., Allen, R.G., 2014.
+Satellite-based evapotranspiration of a super-intensive olive
+orchard:  Application of METRIC algorithms. Biosystems Engineering
+128, 69–81. https://doi.org/10.1016/j.biosystemseng.2014.06.019</em></p>
+<p><em>Turner, D.P., Cohen, W.B., Kennedy, R.E., Fassnacht, K.S., Briggs,
+J.M., 1999. Relationships between Leaf Area Index and Landsat TM
+Spectral Vegetation Indices across Three Temperate Zone Sites.
+Remote Sensing of Environment 70, 52–68.
+https://doi.org/10.1016/S0034-4257(99)00057-7</em></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.VegIndices.biomass_sat">
+<code class="descname">biomass_sat</code><span class="sig-paren">(</span><em>ndvi</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#VegIndices.biomass_sat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.VegIndices.biomass_sat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculation of amount of fresh biomass from satellite data. NDVI is used
+for estimation <img class="math" src="_images/math/62e67f8dcec184eefc400a3444df047a53b6a7d2.svg" alt="(t.ha^{-1})"/></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ndvi</strong> – Normalized Difference Vegetation Index (NDVI).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Amount of fresh biomass <img class="math" src="_images/math/62e67f8dcec184eefc400a3444df047a53b6a7d2.svg" alt="(t.ha^{-1})"/></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.VegIndices.fractVegCover">
+<code class="descname">fractVegCover</code><span class="sig-paren">(</span><em>ndvi</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#VegIndices.fractVegCover"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.VegIndices.fractVegCover" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fractional vegetation cover layer - Fc.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ndvi</strong> (<em>numpy.ndarray</em>) – Normalized Difference Vegetation Index - NDVI (unitless)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Fractional vegetation cover layer - Fc (unitless)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.VegIndices.vegHeight">
+<code class="descname">vegHeight</code><span class="sig-paren">(</span><em>h_min</em>, <em>h_max</em>, <em>msavi</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#VegIndices.vegHeight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.VegIndices.vegHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Height of effective vegetation cover (m) derived from MSAVI index
+according to Gao et al. (2011).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>h_min</strong> (<em>numpy.ndarray</em>) – Maximal height of vegetation cover (m)</li>
+<li><strong>h_max</strong> (<em>numpy.ndarray</em>) – Minimal height of vegetation cover (m)</li>
+<li><strong>msavi</strong> (<em>numpy.ndarray</em>) – Modified Soil Adjusted Vegetation Index (MSAVI)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Effective vegetation cover height (m)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References</strong></p>
+<p><em>Gao, Z.Q., Liu, C.S., Gao, W., Chang, N.-B., 2011. A coupled remote
+sensing and the Surface Energy Balance with Topography Algorithm
+(SEBTA) to estimate actual evapotranspiration over heterogeneous
+terrain. Hydrol. Earth Syst. Sci. 15, 119–139.
+https://doi.org/10.5194/hess-15-119-2011</em></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.VegIndices.viMSAVI">
+<code class="descname">viMSAVI</code><span class="sig-paren">(</span><em>red</em>, <em>nir</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#VegIndices.viMSAVI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.VegIndices.viMSAVI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modified Soil Adjusted Vegetation Index - MSAVI (Qi et al. 1994).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>red</strong> (<em>numpy.ndarray</em>) – Spectral reflectance in RED region (rel.)</li>
+<li><strong>nir</strong> (<em>numpy.ndarray</em>) – Spectral reflectance in NIR region (rel.)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Modified Soil Adjusted Vegetation Index - SAVI (unitless)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References</strong></p>
+<p><em>Qi, J., Chehbouni, A., Huete, A.R., Kerr, Y.H., Sorooshian, S.,
+1994. A modified soil adjusted vegetation index. Remote Sensing of
+Environment 48, 119–126. https://doi.org/10.1016/0034-4257(94)90134-1</em></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.VegIndices.viNDMI">
+<code class="descname">viNDMI</code><span class="sig-paren">(</span><em>nir</em>, <em>swir1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#VegIndices.viNDMI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.VegIndices.viNDMI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalized Vegetation Moisture Index - NDMI.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>nir</strong> (<em>numpy.ndarray</em>) – Spectral reflectance in NIR region (rel.)</li>
+<li><strong>swir1</strong> – Spectral reflectance in SWIR region (approx. 1.61         <img class="math" src="_images/math/2e20630764c69ea2742b052a3dc4ef792098245b.svg" alt="\mu{m}"/> (rel.)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Normalized Vegetation Moisture Index - NDMI (unitless)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.VegIndices.viNDVI">
+<code class="descname">viNDVI</code><span class="sig-paren">(</span><em>red</em>, <em>nir</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#VegIndices.viNDVI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.VegIndices.viNDVI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalized Difference Vegetation Index - NDVI.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>red</strong> (<em>numpy.ndarray</em>) – Spectral reflectance in RED region (rel.)</li>
+<li><strong>nir</strong> (<em>numpy.ndarray</em>) – Spectral reflectance in NIR region (rel.)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Normalized Difference Vegetation Index - NDVI (unitless)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.VegIndices.viOSAVI">
+<code class="descname">viOSAVI</code><span class="sig-paren">(</span><em>red</em>, <em>nir</em>, <em>L=0.16</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#VegIndices.viOSAVI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.VegIndices.viOSAVI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optimized Soil Adjusted Vegetation Index - OSAVI (Rondeaux et al. (
+1996)).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>red</strong> (<em>numpy.ndarray</em>) – Spectral reflectance in RED region (rel.)</li>
+<li><strong>nir</strong> (<em>numpy.ndarray</em>) – Spectral reflectance in NIR region (rel.)</li>
+<li><strong>L</strong> (<em>float</em>) – Parameter L. Default L=0.5</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Soil Adjusted Vegetation Index - OSAVI (unitless)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References</strong></p>
+<p><em>Rondeaux G., Steven M., Baret F. (1996): Optimisation of
+soil-adjusted vegetation indices Remote Sensing of Environment,
+55 (1996), pp. 95-107</em></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.VegIndices.viRDVI">
+<code class="descname">viRDVI</code><span class="sig-paren">(</span><em>red</em>, <em>nir</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#VegIndices.viRDVI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.VegIndices.viRDVI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renormalized Difference Vegetation Index - RDVI (Roujean and
+Breon, 1995).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>red</strong> (<em>numpy.ndarray</em>) – Spectral reflectance in RED region (rel.)</li>
+<li><strong>nir</strong> (<em>numpy.ndarray</em>) – Spectral reflectance in NIR region (rel.)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">RDVI</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References</strong></p>
+<p><em>Roujean, J.-L., Breon, F.-M., 1995. Estimating PAR absorbed
+by vegetation from bidirectional reflectance measurements.
+Remote Sensing of Environment 51, 375–384.
+https://doi.org/10.1016/0034-4257(94)00114-3</em></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.VegIndices.viSAVI">
+<code class="descname">viSAVI</code><span class="sig-paren">(</span><em>red</em>, <em>nir</em>, <em>L=0.5</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#VegIndices.viSAVI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.VegIndices.viSAVI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Soil Adjusted Vegetation Index - SAVI (Huete, 1988).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>red</strong> (<em>numpy.ndarray</em>) – Spectral reflectance in RED region (rel.)</li>
+<li><strong>nir</strong> (<em>numpy.ndarray</em>) – Spectral reflectance in NIR region (rel.)</li>
+<li><strong>L</strong> (<em>float</em>) – Parameter L. Default L=0.5</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Soil Adjusted Vegetation Index - SAVI (unitless)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References</strong></p>
+<p><em>Huete A.R. (1988): A soil-adjusted vegetation index (SAVI) Remote
+Sensing of Environment 27, 47-57.</em></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="SEBCS_lib.WindStability">
+<em class="property">class </em><code class="descclassname">SEBCS_lib.</code><code class="descname">WindStability</code><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Atmospheric stability calculation. Class includes methods for calculation
+of boundary layer stability, friction velocity and aerodynamic
+resistance of the surface. Methods for calculation of stability
+parameters for both aerodynamic and gradient methods are included.
+Methods for SEBAL procedure are also used. Some another features
+are included.</p>
+<dl class="method">
+<dt id="SEBCS_lib.WindStability.aeroSEBAL">
+<code class="descname">aeroSEBAL</code><span class="sig-paren">(</span><em>Uz</em>, <em>ta</em>, <em>ts</em>, <em>z0m</em>, <em>Rn</em>, <em>G</em>, <em>rho</em>, <em>niter=10</em>, <em>Z=200</em>, <em>z1=0.1</em>, <em>z2=2</em>, <em>cp=1012.0</em>, <em>kappa=0.41</em>, <em>mask=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.aeroSEBAL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.aeroSEBAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculation of sensible heat flux and surface aerodynamic resistance
+according to Bastiaanssen et al. (1998).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>Uz</strong> (<em>numpy.ndarray</em>) – Wind speed at level Z <img class="math" src="_images/math/50dab5396e36db12cdbb3ed8c451183e12271a2b.svg" alt="(m.s^{-1})"/></li>
+<li><strong>ta</strong> (<em>numpy.ndarray</em>) – Air temperature at blending height           <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>ts</strong> (<em>numpy.ndarray</em>) – Surface temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>z0m</strong> (<em>numpy.ndarray</em>) – Surface roughness for momentum transfer (m)</li>
+<li><strong>Rn</strong> (<em>numpy.ndarray</em>) – Total net radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>G</strong> (<em>numpy.ndarray</em>) – Ground heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>rho</strong> (<em>numpy.ndarray</em>) – Specific air density <img class="math" src="_images/math/33223e2102dac2b47995a54fe6729f96aa1dbea2.svg" alt="(g.m^{-3})"/></li>
+<li><strong>niter</strong> (<em>int</em>) – Number of iteration</li>
+<li><strong>Z</strong> (<em>float</em><em> (</em><em>Numpy array</em><em>)</em>) – Blending height (mixing layer height) (m). Default 200 m.</li>
+<li><strong>z1</strong> (<em>float</em>) – First height above zero plane displacement (m)</li>
+<li><strong>z2</strong> (<em>float</em>) – Second height above zero plane displacement (m)</li>
+<li><strong>cp</strong> (<em>float</em>) – Thermal heat capacity of dry air <img class="math" src="_images/math/baac15e59e6eca804dd30cc7e9e36500d98b3908.svg" alt="(K.kg^{-1}.K^{-1})"/></li>
+<li><strong>kappa</strong> (<em>float</em>) – von Karman constant. Default 0.41</li>
+<li><strong>mask</strong> – Mask of the area of interest. Number of rows and columns</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>should be the same.  Format (1, 0) or (1, nan).
+:type mask: numpy.ndarray</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Aerodynamic resistance for heat transfer <img class="math" src="_images/math/370352244d2f01b99b605ada38edfd25bdacdd39.svg" alt="(s.m^{-1})"/>            calculated according to SEBAL (Bastiaanssen et al. 1998)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Sensible heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/> calculated according             to SEBAL (Bastiaanssen et al. 1998)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.coefX">
+<em class="property">static </em><code class="descname">coefX</code><span class="sig-paren">(</span><em>Z</em>, <em>L</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.coefX"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.coefX" title="Permalink to this definition">¶</a></dt>
+<dd><p>X coefficient for atmospheric stability calculation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Z</strong> (<em>float</em>) – Blending height (mixing layer height) (m).
+Default 200 m.</li>
+<li><strong>L</strong> (<em>numpy.ndarray</em>) – Monin-Obukhov length (m)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">X coefficient for atmospheric stability calculation</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.coef_a">
+<em class="property">static </em><code class="descname">coef_a</code><span class="sig-paren">(</span><em>t_wet</em>, <em>cb</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.coef_a"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.coef_a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coefficient a calculated from temperature gradient.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>t_wet</strong> (<em>numpy.ndarray</em>) – Temperature for wet surface <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>cb</strong> (<em>numpy.ndarray</em>) – Coefficient b calculated from temperature gradient</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Coefficient a calculated from temperature gradient</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.coef_b">
+<em class="property">static </em><code class="descname">coef_b</code><span class="sig-paren">(</span><em>t_dry</em>, <em>t_wet</em>, <em>t_max</em>, <em>ta</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.coef_b"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.coef_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coefficient b calculated from temperature gradient.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>t_dry</strong> (<em>float</em><em>, </em><em>numpy.ndarray</em>) – Temperature for dry surface derived from the surface              temperature layer <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>t_wet</strong> (<em>float</em><em>, </em><em>numpy.ndarray</em>) – Temperature for wet surface derived from the surface              temperature layer <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>t_max</strong> (<em>numpy.ndarray</em>) – Maximal surface temperature calculated from energy                balance <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>ta</strong> (<em>numpy.ndarray</em>) – Air temperature at level Z <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Coefficient a calculated from temperature gradient</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.WindStability.dT">
+<code class="descname">dT</code><span class="sig-paren">(</span><em>ts</em>, <em>ta</em>, <em>Rn</em>, <em>G</em>, <em>ra</em>, <em>rho</em>, <em>cp=1012.0</em>, <em>mask=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.dT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.dT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temperature gradient calculated according to SEBAL
+(Bastiaanssen et al. 1998).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ts</strong> (<em>numpy.ndarray</em>) – Surface temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>ta</strong> (<em>numpy.ndarray</em>) – Air temperature at level Z <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>Rn</strong> (<em>numpy.ndarray</em>) – Total net radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>G</strong> (<em>numpy.ndarray</em>) – Ground heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>ra</strong> (<em>numpy.ndarray</em>) – Aerodynamic resistance <img class="math" src="_images/math/370352244d2f01b99b605ada38edfd25bdacdd39.svg" alt="(s.m^{-1})"/></li>
+<li><strong>rho</strong> (<em>numpy.ndarray</em>) – Specific air density <img class="math" src="_images/math/33223e2102dac2b47995a54fe6729f96aa1dbea2.svg" alt="(g.m^{-3})"/></li>
+<li><strong>cp</strong> (<em>float</em>) – Thermal heat capacity of dry air <img class="math" src="_images/math/baac15e59e6eca804dd30cc7e9e36500d98b3908.svg" alt="(K.kg^{-1}.K^{-1})"/></li>
+<li><strong>mask</strong> – Mask of the area of interest. Number of rows and columns</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>should be the same.  Format (1, 0) or (1, nan).
+:type mask: numpy.ndarray
+:return: Temperature difference dT calculated according to              Bastiaanssen (1998)
+:rtype: numpy.ndarray</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.dryT">
+<em class="property">static </em><code class="descname">dryT</code><span class="sig-paren">(</span><em>ts</em>, <em>mask=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.dryT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.dryT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extraction of temperature for dry surface with no evaporation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ts</strong> (<em>numpy.ndarray</em>) – Surface temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>mask</strong> – Mask of the area of interest. Number of rows and columns</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>should be the same.  Format (1, 0) or (1, nan).
+:type mask: numpy.ndarray</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Temperature of dry surface derived from surface temperature            layer.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.frictVelo">
+<em class="property">static </em><code class="descname">frictVelo</code><span class="sig-paren">(</span><em>Uz</em>, <em>z0m</em>, <em>disp=0.0</em>, <em>Z=200.0</em>, <em>psi_m=0</em>, <em>kappa=0.41</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.frictVelo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.frictVelo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Friction velocity of wind speed <img class="math" src="_images/math/50dab5396e36db12cdbb3ed8c451183e12271a2b.svg" alt="(m.s^{-1})"/> corrected on atmospheric
+stability.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>disp</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – </li>
+<li><strong>Uz</strong> (<em>numpy.ndarray</em>) – Wind speed at Z level <img class="math" src="_images/math/50dab5396e36db12cdbb3ed8c451183e12271a2b.svg" alt="(m.s^{-1})"/></li>
+<li><strong>z0m</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Surface roughness for momentum transfer (m)</li>
+<li><strong>disp</strong> – Zero plane displacement (m)</li>
+<li><strong>Z</strong> (<em>float</em>) – Blending height (mixing layer height) (m).
+Default 200 m.</li>
+<li><strong>psi_m</strong> (<em>numpy.ndarray</em>) – Stability parameter for momentum transfer.
+Defaul 0.</li>
+<li><strong>kappa</strong> (<em>float</em>) – von Karman constant. Default 0.41</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Friction velocity <img class="math" src="_images/math/50dab5396e36db12cdbb3ed8c451183e12271a2b.svg" alt="(m.s^{-1})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.lengthMO">
+<em class="property">static </em><code class="descname">lengthMO</code><span class="sig-paren">(</span><em>frict</em>, <em>ts</em>, <em>flux_H=None</em>, <em>rho=None</em>, <em>t_virt=None</em>, <em>cp=1012</em>, <em>kappa=0.41</em>, <em>gravit=9.81</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.lengthMO"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.lengthMO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Monin-Obukhov length (m)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>frict</strong> (<em>numpy.ndarray</em>) – Friction velocity <img class="math" src="_images/math/50dab5396e36db12cdbb3ed8c451183e12271a2b.svg" alt="(m.s^{-1})"/></li>
+<li><strong>ts</strong> (<em>numpy.ndarray</em>) – Surface temperature (C degree)</li>
+<li><strong>flux_H</strong> (<em>numpy.ndarray</em>) – Sensible heat flux (W.m2)</li>
+<li><strong>rho</strong> (<em>numpy.ndarray</em>) – Specific air density <img class="math" src="_images/math/33223e2102dac2b47995a54fe6729f96aa1dbea2.svg" alt="(g.m^{-3})"/></li>
+<li><strong>t_virt</strong> (<em>numpy.ndarray</em>) – Virtual temperature</li>
+<li><strong>cp</strong> (<em>float</em>) – Thermal heat capacity of dry air <img class="math" src="_images/math/baac15e59e6eca804dd30cc7e9e36500d98b3908.svg" alt="(K.kg^{-1}.K^{-1})"/></li>
+<li><strong>kappa</strong> (<em>float</em>) – von Karman constant. Default 0.41</li>
+<li><strong>gravit</strong> (<em>float</em>) – Gravitation forcing (m/s2). Default 9.81</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Monin-Obukhov length (m)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.maxT">
+<em class="property">static </em><code class="descname">maxT</code><span class="sig-paren">(</span><em>Rn</em>, <em>G</em>, <em>ra</em>, <em>ta</em>, <em>rho</em>, <em>cp=1012.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.maxT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.maxT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximal surface temperature calculated on physical basis (K).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Rn</strong> (<em>numpy.ndarray</em>) – Total net radiation <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>G</strong> (<em>numpy.ndarray</em>) – Ground heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>ra</strong> (<em>numpy.ndarray</em>) – Aerodynamic resistance for heat transfer <img class="math" src="_images/math/370352244d2f01b99b605ada38edfd25bdacdd39.svg" alt="(s.m^{-1})"/></li>
+<li><strong>ta</strong> (<em>numpy.ndarray</em>) – Air temperature at level Z <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>rho</strong> (<em>numpy.ndarray</em>) – Specific air density <img class="math" src="_images/math/33223e2102dac2b47995a54fe6729f96aa1dbea2.svg" alt="(g.m^{-3})"/></li>
+<li><strong>cp</strong> (<em>float</em>) – Thermal heat capacity of dry air <img class="math" src="_images/math/baac15e59e6eca804dd30cc7e9e36500d98b3908.svg" alt="(K.kg^{-1}.K^{-1})"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Maximal surface temperature calculated from energy balance             equation <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.psiH">
+<em class="property">static </em><code class="descname">psiH</code><span class="sig-paren">(</span><em>L</em>, <em>X</em>, <em>Z=200</em>, <em>a=1.0</em>, <em>b=0.667</em>, <em>c=5.0</em>, <em>d=0.35</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.psiH"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.psiH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculation of stability parameter for heat transfer (-)
+according to Beljaars et Holstag (1991) for stable conditions
+and Liu et al. (2007) for unstable and neutral conditions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>L</strong> (<em>numpy.ndarray</em>) – Monin-Obukhov length (m)</li>
+<li><strong>X</strong> (<em>numpy.ndarray</em>) – X coefficient for stability calculation</li>
+<li><strong>Z</strong> (<em>float</em>) – Blending height (mixing layer height) (m).
+Default 200 m.</li>
+<li><strong>a</strong> (<em>float</em>) – Coefficient. Default a = 1.0</li>
+<li><strong>b</strong> (<em>float</em>) – Coefficient. Default b = 0.667</li>
+<li><strong>c</strong> (<em>float</em>) – Coefficient. Defalt c = 5.0</li>
+<li><strong>d</strong> (<em>float</em>) – Coefficient. Default d = 0.35</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Stability parameter for momentum transfer (-)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.psiM">
+<em class="property">static </em><code class="descname">psiM</code><span class="sig-paren">(</span><em>L</em>, <em>X</em>, <em>Z=200</em>, <em>a=1.0</em>, <em>b=0.667</em>, <em>c=5.0</em>, <em>d=0.35</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.psiM"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.psiM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculation of stability parameter for momentum transfer (-)
+according to Beljaars et Holstag (1991) for stable conditions
+and Liu et al. (2007) for unstable and neutral conditions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>L</strong> (<em>numpy.ndarray</em>) – Monin-Obukhov length (m)</li>
+<li><strong>X</strong> (<em>numpy.ndarray</em>) – X coefficient for stability calculation</li>
+<li><strong>Z</strong> (<em>float</em>) – Blending height (mixing layer height) (m).
+Default 200 m.</li>
+<li><strong>a</strong> (<em>float</em>) – Coefficient. Default a = 1.0</li>
+<li><strong>b</strong> (<em>float</em>) – Coefficient. Default b = 0.667</li>
+<li><strong>c</strong> (<em>float</em>) – Coefficient. Defalt c = 5.0</li>
+<li><strong>d</strong> (<em>float</em>) – Coefficient. Default d = 0.35</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Stability parameter for momentum transfer (-)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.raGrad">
+<em class="property">static </em><code class="descname">raGrad</code><span class="sig-paren">(</span><em>flux_H</em>, <em>rho</em>, <em>ts</em>, <em>ta</em>, <em>cp=1012</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.raGrad"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.raGrad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aerodynamic resistance for heat and momentum transfer <cite>(s.m^{-1})</cite>
+calculated from conversion of sensible heat flux equation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>flux_H</strong> (<em>numpy.ndarray</em>) – Sensible heat flux <img class="math" src="_images/math/17ab3d62def32c3f6e35ef07a4b366ae3ca5feca.svg" alt="(W.m^{-2})"/></li>
+<li><strong>rho</strong> (<em>numpy.ndarray</em>) – Specific air density <img class="math" src="_images/math/33223e2102dac2b47995a54fe6729f96aa1dbea2.svg" alt="(g.m^{-3})"/></li>
+<li><strong>ts</strong> – Surface temperature <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>ta</strong> (<em>numpy.ndarray</em>) – Air temperature at level Z <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></li>
+<li><strong>cp</strong> (<em>float</em>) – Thermal heat capacity of dry air <img class="math" src="_images/math/baac15e59e6eca804dd30cc7e9e36500d98b3908.svg" alt="(K.kg^{-1}.K^{-1})"/></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Aerodynamic resistance for gradient model <img class="math" src="_images/math/370352244d2f01b99b605ada38edfd25bdacdd39.svg" alt="(s.m^{-1})"/></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.raSEBAL">
+<em class="property">static </em><code class="descname">raSEBAL</code><span class="sig-paren">(</span><em>frict</em>, <em>psiH_z1</em>, <em>psiH_z2</em>, <em>z1=0.1</em>, <em>z2=2.0</em>, <em>kappa=0.41</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.raSEBAL"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.raSEBAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculation of surface aerodynamic resistance for heat transfer based on
+SEBAL approach (Bastiaanssen, 1998).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>frict</strong> (<em>numpy.ndarray</em>) – Friction velocity <img class="math" src="_images/math/50dab5396e36db12cdbb3ed8c451183e12271a2b.svg" alt="(m.s^{-1})"/></li>
+<li><strong>psiH_z1</strong> (<em>numpy.ndarray</em>) – Stability parameter for momentum transfer (-) at                level z1</li>
+<li><strong>psiH_z2</strong> (<em>numpy.ndarray</em>) – Stability parameter for momentum transfer (-) at                level z2</li>
+<li><strong>z1</strong> (<em>float</em>) – First height above zero plane displacement (m)</li>
+<li><strong>z2</strong> (<em>float</em>) – Second height above zero plane displacement (m)</li>
+<li><strong>kappa</strong> (<em>float</em>) – von Karman constant. Default 0.41</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Aerodynamic resistance for heat transfer based on              SEBAL approach (Bastiaanssen, 1998).</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.raThom">
+<em class="property">static </em><code class="descname">raThom</code><span class="sig-paren">(</span><em>Uz</em>, <em>z0m</em>, <em>z0h</em>, <em>disp=0.0</em>, <em>psi_m=0.0</em>, <em>psi_h=0.0</em>, <em>Z=200.0</em>, <em>kappa=0.41</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.raThom"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.raThom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aerodynamic resistance for heat and momentum transfer (s.m-1)
+calculated according to Thom (1975).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>disp</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – </li>
+<li><strong>Uz</strong> (<em>numpy.ndarray</em>) – Wind speed at level Z <img class="math" src="_images/math/50dab5396e36db12cdbb3ed8c451183e12271a2b.svg" alt="(m.s^{-1})"/></li>
+<li><strong>z0m</strong> (<em>numpy.ndarray</em>) – Surface roughness for momentum transfer (m)</li>
+<li><strong>z0h</strong> (<em>numpy.ndarray</em>) – Surface roughness for heat transfer (m)</li>
+<li><strong>disp</strong> – Zero plane displacement (m)</li>
+<li><strong>psi_m</strong> (<em>numpy.ndarray</em>) – Stability parameter for momentum transfer (-).
+Default is 0.</li>
+<li><strong>psi_h</strong> (<em>numpy.ndarray</em>) – Stability parameter for heat transfer (-)
+Default is 0.</li>
+<li><strong>Z</strong> (<em>float</em><em> (</em><em>Numpy array</em><em>)</em>) – Blending height (mixing layer height) (m).
+Default 200 m.</li>
+<li><strong>kappa</strong> (<em>float</em>) – von Karman constant. Default 0.41</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return ra:</th><td class="field-body"><p class="first">Aerodynamic resistance for heat and momentum
+transfer (s.m-1) calculated according to Thom (1975)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Rtype ra:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References</strong></p>
+<p><em>Thom, A.S., 1975. Momentum, mass and heat exchange of plant
+communities, in: Monteith, J.L. (Ed.), Vegetation and the Atmosphere,
+Vol. 1 Principles. Academic Press, London, pp. 57–110.</em></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SEBCS_lib.WindStability.stabCoef">
+<code class="descname">stabCoef</code><span class="sig-paren">(</span><em>Uz</em>, <em>ta</em>, <em>ts</em>, <em>z0m</em>, <em>z0h</em>, <em>disp=0</em>, <em>Z=200</em>, <em>L=-10000.0</em>, <em>n_iter=10</em>, <em>a=1.0</em>, <em>b=0.667</em>, <em>c=5.0</em>, <em>d=0.35</em>, <em>kappa=0.41</em>, <em>gravit=9.81</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.stabCoef"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.stabCoef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stability parameters calculation using iterative procedure
+described by Itier (1980).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>disp</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – </li>
+<li><strong>Uz</strong> (<em>numpy.ndarray</em>) – Wind speed at level Z <img class="math" src="_images/math/50dab5396e36db12cdbb3ed8c451183e12271a2b.svg" alt="(m.s^{-1})"/></li>
+<li><strong>ta</strong> (<em>numpy.ndarray</em>) – Air temperature at Z level (K, C degrees)</li>
+<li><strong>ts</strong> (<em>numpy.ndarray</em>) – Surface temperature (K, C degrees)</li>
+<li><strong>z0m</strong> (<em>numpy.ndarray</em>) – Surface roughness for momentum transfer (m)</li>
+<li><strong>z0h</strong> (<em>numpy.ndarray</em>) – Surface roughness for heat transfer (m)</li>
+<li><strong>disp</strong> – Zero plane displacement (m)</li>
+<li><strong>Z</strong> (<em>float</em><em> (</em><em>Numpy array</em><em>)</em>) – Blending height (mixing layer height) (m).
+Default 200 m.</li>
+<li><strong>L</strong> (<em>float</em>) – Initial value of Monin-Obukhov length (m).
+Default -10000.0</li>
+<li><strong>n_iter</strong> (<em>int</em>) – Number of iteration</li>
+<li><strong>a</strong> (<em>float</em>) – Coefficient. Default a = 1.0</li>
+<li><strong>b</strong> (<em>float</em>) – Coefficient. Default b = 0.667</li>
+<li><strong>c</strong> (<em>float</em>) – Coefficient. Defalt c = 5.0</li>
+<li><strong>d</strong> (<em>float</em>) – Coefficient. Default d = 0.35</li>
+<li><strong>kappa</strong> (<em>float</em>) – von Karman constant. Default 0.41</li>
+<li><strong>gravit</strong> (<em>float</em>) – Gravitation forcing (m/s2). Default 9.81</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Stability parameter for momentum transfer (-)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">numpy.ndarray</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Stability parameter for heat transfer (-)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">numpy.ndarray</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Friction velocity <img class="math" src="_images/math/50dab5396e36db12cdbb3ed8c451183e12271a2b.svg" alt="(m.s^{-1})"/>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">numpy.ndarray</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Monin-Obukhov length (m)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.virtTemp">
+<em class="property">static </em><code class="descname">virtTemp</code><span class="sig-paren">(</span><em>ta</em>, <em>ts</em>, <em>z0h</em>, <em>disp=0.0</em>, <em>Z=200</em>, <em>psi_h=0</em>, <em>kappa=0.41</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.virtTemp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.virtTemp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Virtual temperature (K) corrected on atmospheric stability.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>disp</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – </li>
+<li><strong>ta</strong> (<em>numpy.ndarray</em>) – Air temperature at Z level (K, C degrees)</li>
+<li><strong>ts</strong> (<em>numpy.ndarray</em>) – Surface temperature (K, C degrees)</li>
+<li><strong>z0h</strong> (<em>numpy.ndarray</em>) – Surface roughness for heat transfer (m)</li>
+<li><strong>disp</strong> – Zero plane displacement (m)</li>
+<li><strong>Z</strong> (<em>float</em>) – Blending height (mixing layer height) (m). Default 200 m.</li>
+<li><strong>psi_h</strong> (<em>numpy.ndarray</em>) – Stability parameter for heat transfer, Default 0.</li>
+<li><strong>kappa</strong> (<em>float</em>) – von Karman constant. Default 0.41</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Virtual temperature (K)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.wetT">
+<em class="property">static </em><code class="descname">wetT</code><span class="sig-paren">(</span><em>ta</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.wetT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.wetT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface temperature for wet surface. In this case surface temperature
+for wet surface is equal to air temperature. This statement follows 
+from imagine that the LE = Rn - G and thus H is close to zero.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ta</strong> (<em>numpy.ndarray</em>) – Air temperature at level Z <img class="math" src="_images/math/67d3006bea7b2cb67bb0036142103b1e0c8d1496.svg" alt="(\SI{}\degreeCelsius)"/></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Temperature of wet surface.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.windSpeedZ">
+<em class="property">static </em><code class="descname">windSpeedZ</code><span class="sig-paren">(</span><em>U</em>, <em>Z=200.0</em>, <em>Z_st=2.0</em>, <em>h_st=0.12</em>, <em>ws_homog=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.windSpeedZ"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.windSpeedZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wind speed recalculated to height Z according to logarithmic law
+(Gao et al. 2011). The results can contain simple number, homogenous
+or heterogenous matrix of data (Numpy array).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>U</strong> (<em>float</em><em>, </em><em>numpy.ndarray</em>) – Wind speed measured on meteostation at level Z_st <img class="math" src="_images/math/50dab5396e36db12cdbb3ed8c451183e12271a2b.svg" alt="(m.s^{-1})"/>.</li>
+<li><strong>Z</strong> (<em>float</em>) – Blending height (mixing layer height) (m).
+Default 200 m.</li>
+<li><strong>Z_st</strong> (<em>float</em>) – Height of wind speed measurement (m). Default 2 m.</li>
+<li><strong>h_st</strong> (<em>float</em>) – Height of vegetation cover under meteostation (m).
+Default value is 0.12 m which corresponds with
+reference cover used for meteostations.</li>
+<li><strong>ws_homog</strong> – Indicates if the result matrix contains uniform</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>result (mean value of wind speed for the area) or if the results
+includes heterogeneity of input data (each pixel is calculated
+separately). 0 - homogenous, 1 - heterogenous
+:type ws_homog: int
+:return: Wind speed at mixing layer <img class="math" src="_images/math/50dab5396e36db12cdbb3ed8c451183e12271a2b.svg" alt="(m.s^{-1})"/>
+:rtype: float, numpy.ndarray</p>
+<p><strong>References</strong></p>
+<p><em>Gao, Z.Q., Liu, C.S., Gao, W., Chang, N.B., 2011. A coupled remote
+sensing and the Surface Energy Balance with Topography Algorithm
+(SEBTA) to estimate actual evapotranspiration over heterogeneous
+terrain. Hydrol. Earth Syst. Sci. 15, 119–139.
+https://doi.org/10.5194/hess-15-119-2011</em></p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.z0h">
+<em class="property">static </em><code class="descname">z0h</code><span class="sig-paren">(</span><em>z0m</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.z0h"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.z0h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aerodynamic roughness of the surface for heat transfer (m) calculated
+according to Thom (1975).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>z0m</strong> (<em>numpy.ndarray</em><em>, </em><em>float</em>) – Aerodynamic roughness of the surface for momentum           transfer (m)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Aerodynamic roughness of the surface for heat transfer (m)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray, float</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References</strong></p>
+<p><em>Thom, A.S., 1975. Momentum, mass and heat exchange of plant
+communities, in: Monteith, J.L. (Ed.), Vegetation and the Atmosphere,
+Vol. 1 Principles. Academic Press, London, pp. 57–110.</em></p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.z0m">
+<em class="property">static </em><code class="descname">z0m</code><span class="sig-paren">(</span><em>h_eff</em>, <em>LAI</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.z0m"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.z0m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aerodynamic roughness of the surface for momentum transfer (m).
+z0m is calculated according to Tasumi (2003) for vegetation cover
+lower tha 1 m and according to Thom (1975) for vegetation cover
+higher than 1 m. The lowest value of z0m is 0.005, which is typical
+value for agricultural bare soils (Allen et al. 2007)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>h_eff</strong> (<em>numpy.ndarray</em>) – Effective vegetation cover height (m)</li>
+<li><strong>LAI</strong> (<em>numpy.ndarray</em>) – Leaf Area Index</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Aerodynamic roughness of the surface for momentum transfer (m)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References</strong></p>
+<p><em>Allen, R.G., Tasumi, M., Trezza, R., 2007. Satellite-Based Energy
+Balance for Mapping Evapotranspiration with Internalized Calibration
+(METRIC)—Model. J. Irrig. Drain Eng. 133, 380–394.
+https://doi.org/10.1061/(ASCE)0733-9437(2007)133:4(380)</em></p>
+<p><em>Tasumi, M., 2003. Progress in Operational Estimation of Regional
+Evapotranspiration Using Satellite Imagery (Ph.D. Thesis).
+University of Idaho, Moscow, Idaho.</em></p>
+<p><em>Thom, A.S., 1975. Momentum, mass and heat exchange of plant
+communities, in: Monteith, J.L. (Ed.), Vegetation and the Atmosphere,
+Vol. 1 Principles. Academic Press, London, pp. 57–110.</em></p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="SEBCS_lib.WindStability.zeroPlaneDis">
+<em class="property">static </em><code class="descname">zeroPlaneDis</code><span class="sig-paren">(</span><em>h_eff</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#WindStability.zeroPlaneDis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.WindStability.zeroPlaneDis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zero plane displacement (m) calculated according to Thom (1975).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>h_eff</strong> (<em>numpy.ndarray</em>) – Effective vegetation cover height (m)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Zero plane displacement (m)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.ndarray</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References</strong></p>
+<p><em>Thom, A.S., 1975. Momentum, mass and heat exchange of plant
+communities, in: Monteith, J.L. (Ed.), Vegetation and the Atmosphere,
+Vol. 1 Principles. Academic Press, London, pp. 57–110.</em></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="description.html" class="btn btn-neutral" title="Description of Urban Green SARCA (In Czech)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Jakub Brom, ENKI o.p.s. Třeboň.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> and ❤️  using a custom <a href="https://github.com/LinxiFan/Sphinx-theme">theme</a> based on <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
