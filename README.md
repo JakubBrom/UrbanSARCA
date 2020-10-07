@@ -17,3 +17,8 @@ very simple way and thus it is a usable tool for decision makers and
 authorities in case of radiation accident. The usage of module is suitable
 mostly for areas where the vegetation cover and amount of biomass is not very
 well documented, e.g. urban areas.
+
+**Install**
+
+Download plugin in zip format and add it to QGIS using plugin manager
+(Plugins/Manage and Install Plugin). Plugin Urban Green Sarca is available for QGIS 3.+
