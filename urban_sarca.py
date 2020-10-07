@@ -427,17 +427,18 @@ class UrbanSARCA:
 
         # 5. Layers export
         output = {
-            "LAI": lai,
             "Biomass": biom,
             "Intercept_factor": IF,
             "Veg_contamination": dep_biom,
             "Soil_contamination": dep_soil,
             "Mass_contamination": cont_weight,
             "Mask_hyg_lim": mask_HL,
-            "Mask_ref_levels": mask_RU,
-            "NDVI": ndvi,
-            "MSAVI": msavi
+            "Mask_ref_levels": mask_RU
         }
+
+        # "LAI": lai,
+        # "NDVI": ndvi,
+        # "MSAVI": msavi
 
         self.outlyrs = list(output.values())
         self.outnames = list(output.keys())
