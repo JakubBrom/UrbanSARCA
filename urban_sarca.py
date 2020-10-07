@@ -22,26 +22,22 @@
  ***************************************************************************/
 """
 from qgis.PyQt.QtCore import QSettings, QTranslator, \
-    QCoreApplication, Qt, QUrl, pyqtSignal
+    QCoreApplication, Qt, QUrl
 from qgis.PyQt.QtGui import QIcon, QDesktopServices, QImage, QPixmap
 from qgis.PyQt.QtWidgets import QAction, QFileDialog, QComboBox, \
     QPushButton, QMessageBox
-from qgis.utils import showPluginHelp
 # Initialize Qt resources from file resources.py
 from .resources import *
 
-from qgis.gui import QgsMessageBar
-from qgis.core import QgsProject, Qgis, QgsMapLayerProxyModel
+from qgis.core import Qgis, QgsMapLayerProxyModel
 
 # Import the code for the DockWidget
 from .urban_sarca_dockwidget import UrbanSARCADockWidget
-import os
 import sys
 import urllib.request
-import numpy as np
 
-import UrbanSARCA.urban_sarca_lib as sc
-import UrbanSARCA.overlap_clip as oc
+from .urban_sarca_lib import *
+from .overlap_clip import *
 from .SEBCS_lib import GeoIO, VegIndices
 geo = GeoIO()
 vi = VegIndices()
@@ -394,7 +390,7 @@ class UrbanSARCA:
         if precip_path != None:
             # 1. Layers clipping
             in_lyrs = [red_path, nir_path, depo_path, precip_path]
-            (cl_red, cl_nir, cl_depo, cl_precip) = oc.clipOverlappingArea(
+            (cl_red, cl_nir, cl_depo, cl_precip) = clipOverlappingArea(
                 in_lyrs, tmp_out=True)
 
             # 2. Layers import to Numpy arrays
@@ -405,7 +401,7 @@ class UrbanSARCA:
         else:
             # 1. Layers clipping
             in_lyrs = [red_path, nir_path, depo_path]
-            (cl_red, cl_nir, cl_depo) = oc.clipOverlappingArea(in_lyrs,
+            (cl_red, cl_nir, cl_depo) = clipOverlappingArea(in_lyrs,
                                                                tmp_out=True)
 
             # 2. Layers import to Numpy arrays
@@ -424,14 +420,14 @@ class UrbanSARCA:
         biom = vi.biomass_sat(ndvi)
 
         # 3. IF and radioactive deposition calculation
-        IF = sc.interceptFactor(lai, precip, biom)
-        dep_biom = sc.contBiomass(in_depo, IF)
-        dep_soil = sc.contSoil(in_depo, IF)
-        cont_weight = sc.contMass(dep_biom, biom)
+        IF = interceptFactor(lai, precip, biom)
+        dep_biom = contBiomass(in_depo, IF)
+        dep_soil = contSoil(in_depo, IF)
+        cont_weight = contMass(dep_biom, biom)
 
         # 4. RU and hyg_lim masks
-        mask_HL = sc.hygLimit(cont_weight, hyg_lim)
-        mask_RU = sc.referLevel(in_depo, ref_level1, ref_level2)
+        mask_HL = hygLimit(cont_weight, hyg_lim)
+        mask_RU = referLevel(in_depo, ref_level1, ref_level2)
 
         # 5. Layers export
         output = {
