@@ -3,6 +3,7 @@ Urban Green SARCA
 
 QGIS plugin for analysis of radioactive contamination of vegetation cover in (mostly) urban environment
 
+
 **Description**
 
 The Urban Green SARCA (USG) module is a GIS tool created for the purpose of
@@ -18,7 +19,13 @@ authorities in case of radiation accident. The usage of module is suitable
 mostly for areas where the vegetation cover and amount of biomass is not very
 well documented, e.g. urban areas.
 
+
 **Install**
 
 Download plugin in zip format and add it to QGIS using plugin manager
 (Plugins/Manage and Install Plugin). Plugin Urban Green Sarca is available for QGIS 3.+
+
+
+**Acknowledgement**
+
+QGIS module Urban Green SARCA development was supported by project of Ministry of the Interior of the Czech Republic No. VH20172020015
