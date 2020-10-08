@@ -113,8 +113,8 @@
     </message>
     <message>
         <location filename="../urban_sarca_dockwidget_base.ui" line="107"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;NIR band (rel., ~ 850 Î¼m)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;NIR pásmo (rel., ~ 850 Î¼m)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;NIR band (rel., ~ 850 &amp;mu;m)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;NIR pásmo (rel., ~ 850 &amp;mu;m)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../urban_sarca_dockwidget_base.ui" line="494"/>
@@ -123,8 +123,8 @@
     </message>
     <message>
         <location filename="../urban_sarca_dockwidget_base.ui" line="133"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Red band (rel., ~680 Î¼m)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Červené pásmo (rel., ~680 Î¼m)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Red band (rel., ~680 &amp;mu;m)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Červené pásmo (rel., ~680 &amp;mu;m)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../urban_sarca_dockwidget_base.ui" line="186"/>
