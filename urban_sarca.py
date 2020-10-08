@@ -370,6 +370,17 @@ class UrbanSARCA:
                 raise FileNotFoundError(self.tr("Path to precipitation layer "
                                                 "has not been selected"))
 
+        # Radionuclide
+        radio_index = self.dockwidget.cbox_cont.currentIndex()
+        if radio_index == 0:
+            radionuclide = 1.0
+        elif radio_index == 1 or radio_index == 3:
+            radionuclide = 2.0
+        elif radio_index == 2:
+            radionuclide = 0.5
+        else:
+            radionuclide = 1.0
+
         # Constants
         ref_level1 = self.dockwidget.sbox_ru1.value()
         ref_level2 = self.dockwidget.sbox_ru2.value()
@@ -416,7 +427,7 @@ class UrbanSARCA:
         biom = vi.biomass_sat(ndvi)
 
         # 3. IF and radioactive deposition calculation
-        IF = interceptFactor(lai, precip, biom)
+        IF = interceptFactor(lai, precip, biom, radionuclide)
         dep_biom = contBiomass(in_depo, IF)
         dep_soil = contSoil(in_depo, IF)
         cont_weight = contMass(dep_biom, biom)
@@ -488,9 +499,9 @@ class UrbanSARCA:
                                             Qt.SmoothTransformation)
         msgBox = QMessageBox()
         msgBox.setIconPixmap(pixmap)
-        msgBox.setText("Urban Green SARCA plug-in development has "
+        msgBox.setText(self.tr("Urban Green SARCA plug-in development has "
                        "been supported by project of Ministry of the "
-                       "Interior of the Czech Republic No. VH20172020015")
+                       "Interior of the Czech Republic No. VH20172020015"))
         msgBox.setWindowTitle(self.tr("Acknowledgement"))
         msgBox.exec()
 
