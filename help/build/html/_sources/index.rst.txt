@@ -21,6 +21,7 @@ well documented, e.g. urban areas.
 
 
 Contents:
+---------
 
 .. toctree::
    :maxdepth: 3
@@ -30,7 +31,7 @@ Contents:
    ackn
 
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
 * :ref:`modindex`

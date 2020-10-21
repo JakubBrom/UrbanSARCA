@@ -188,8 +188,6 @@ class UrbanSARCA:
         if not self.pluginIsActive:
             self.pluginIsActive = True
 
-            #print "** STARTING UrbanSARCA"
-            self.showInfo()
             # dockwidget may not exist if:
             #    first run of plugin
             #    removed on close (see self.onClosePlugin method)
@@ -524,6 +522,9 @@ class UrbanSARCA:
 
     def run(self):
         """Run method that loads and starts the plugin"""
+
+        # print "** STARTING UrbanSARCA"
+        self.showInfo()
 
         # Set path to out folder
         self.dockwidget.pb_out.clicked.connect(self.outFolder)
