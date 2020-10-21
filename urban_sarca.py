@@ -185,6 +185,21 @@ class UrbanSARCA:
             callback=self.run,
             parent=self.iface.mainWindow())
 
+        if not self.pluginIsActive:
+            self.pluginIsActive = True
+
+            #print "** STARTING UrbanSARCA"
+            self.showInfo()
+            # dockwidget may not exist if:
+            #    first run of plugin
+            #    removed on close (see self.onClosePlugin method)
+            if self.dockwidget == None:
+                # Create the dockwidget (after translation) and keep reference
+                self.dockwidget = UrbanSARCADockWidget()
+
+        # Help
+        self.dockwidget.buttonBox.helpRequested.connect(self.pluginHelp)
+
     # ----------------------------------------------------------------
 
     def setCboxEmpty(self, comboBox):
@@ -360,7 +375,7 @@ class UrbanSARCA:
             except Exception:
                 precip_path = self.dockwidget.cbox_precip.currentText()
 
-            if depo_path is None or depo_path == "":
+            if precip_path is None or precip_path == "":
                 self.iface.messageBar().pushMessage(
                     self.tr("Path error"),
                     self.tr("Path to precipitation layer has not been "
@@ -510,65 +525,50 @@ class UrbanSARCA:
     def run(self):
         """Run method that loads and starts the plugin"""
 
-        if not self.pluginIsActive:
-            self.pluginIsActive = True
+        # Set path to out folder
+        self.dockwidget.pb_out.clicked.connect(self.outFolder)
 
-            #print "** STARTING UrbanSARCA"
-            self.showInfo()
-            # dockwidget may not exist if:
-            #    first run of plugin
-            #    removed on close (see self.onClosePlugin method)
-            if self.dockwidget == None:
-                # Create the dockwidget (after translation) and keep reference
-                self.dockwidget = UrbanSARCADockWidget()
+        # Initial setting of the empty cboxes
+        self.setCboxEmpty(self.dockwidget.cbox_red)
+        self.setCboxEmpty(self.dockwidget.cbox_nir)
+        self.setCboxEmpty(self.dockwidget.cbox_depo)
+        self.setCboxEmpty(self.dockwidget.cbox_precip)
 
-            # Set path to out folder
-            self.dockwidget.pb_out.clicked.connect(self.outFolder)
+        # If precipitation is constant the cbox for precipitation
+        # raster is empty
+        self.dockwidget.rb_precip_konst.toggled.connect(lambda:
+                self.setCboxEmpty(self.dockwidget.cbox_precip))
+        self.dockwidget.rb_precip_rast.toggled.connect(lambda:
+            self.dockwidget.cbox_precip.setCurrentIndex(0))
+        # If raster of precipitation is selected, value in spinbox is set
+        # to 0.0
+        self.dockwidget.rb_precip_rast.toggled.connect(lambda:
+            self.dockwidget.sbox_precip.setValue(0.00))
 
-            # Initial setting of the empty cboxes
-            self.setCboxEmpty(self.dockwidget.cbox_red)
-            self.setCboxEmpty(self.dockwidget.cbox_nir)
-            self.setCboxEmpty(self.dockwidget.cbox_depo)
-            self.setCboxEmpty(self.dockwidget.cbox_precip)
+        # Read list of names and layers paths from QGIS legend
+        self.dockwidget.cbox_red.setFilters(QgsMapLayerProxyModel.RasterLayer)
+        self.dockwidget.cbox_nir.setFilters(QgsMapLayerProxyModel.RasterLayer)
+        self.dockwidget.cbox_depo.setFilters(QgsMapLayerProxyModel.RasterLayer)
+        self.dockwidget.cbox_precip.setFilters(
+            QgsMapLayerProxyModel.RasterLayer)
 
-            # If precipitation is constant the cbox for precipitation
-            # raster is empty
-            self.dockwidget.rb_precip_konst.toggled.connect(lambda:
-                    self.setCboxEmpty(self.dockwidget.cbox_precip))
-            self.dockwidget.rb_precip_rast.toggled.connect(lambda:
-                self.dockwidget.cbox_precip.setCurrentIndex(0))
-            # If raster of precipitation is selected, value in spinbox is set
-            # to 0.0
-            self.dockwidget.rb_precip_rast.toggled.connect(lambda:
-                self.dockwidget.sbox_precip.setValue(0.00))
+        # Set path to selected raster files to CBoxes
+        self.dockwidget.pb_red.clicked.connect(lambda:
+            self.selectFile(self.dockwidget.cbox_red))
+        self.dockwidget.pb_nir.clicked.connect(
+            lambda: self.selectFile(self.dockwidget.cbox_nir))
+        self.dockwidget.pb_depo.clicked.connect(
+            lambda: self.selectFile(self.dockwidget.cbox_depo))
+        self.dockwidget.pb_precip.clicked.connect(
+            lambda: self.selectFile(self.dockwidget.cbox_precip))
 
-            # Read list of names and layers paths from QGIS legend
-            self.dockwidget.cbox_red.setFilters(QgsMapLayerProxyModel.RasterLayer)
-            self.dockwidget.cbox_nir.setFilters(QgsMapLayerProxyModel.RasterLayer)
-            self.dockwidget.cbox_depo.setFilters(QgsMapLayerProxyModel.RasterLayer)
-            self.dockwidget.cbox_precip.setFilters(
-                QgsMapLayerProxyModel.RasterLayer)
+        # Calculate
+        self.dockwidget.buttonBox.accepted.connect(self.calculate)
 
-            # Set path to selected raster files to CBoxes
-            self.dockwidget.pb_red.clicked.connect(lambda:
-                self.selectFile(self.dockwidget.cbox_red))
-            self.dockwidget.pb_nir.clicked.connect(
-                lambda: self.selectFile(self.dockwidget.cbox_nir))
-            self.dockwidget.pb_depo.clicked.connect(
-                lambda: self.selectFile(self.dockwidget.cbox_depo))
-            self.dockwidget.pb_precip.clicked.connect(
-                lambda: self.selectFile(self.dockwidget.cbox_precip))
+        # connect to provide cleanup on closing of dockwidget
+        self.dockwidget.closingPlugin.connect(self.onClosePlugin)
 
-            # Calculate
-            self.dockwidget.buttonBox.accepted.connect(self.calculate)
-
-            # Help
-            self.dockwidget.buttonBox.helpRequested.connect(self.pluginHelp)
-
-            # connect to provide cleanup on closing of dockwidget
-            self.dockwidget.closingPlugin.connect(self.onClosePlugin)
-
-            # show the dockwidget
-            # TODO: fix to allow choice of dock location
-            self.iface.addDockWidget(Qt.RightDockWidgetArea, self.dockwidget)
-            self.dockwidget.show()
+        # show the dockwidget
+        # TODO: fix to allow choice of dock location
+        self.iface.addDockWidget(Qt.RightDockWidgetArea, self.dockwidget)
+        self.dockwidget.show()

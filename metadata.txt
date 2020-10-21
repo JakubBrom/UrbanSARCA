@@ -7,7 +7,7 @@ name=Urban Green SARCA
 qgisMinimumVersion=3.0
 description=Plugin for analysis of radioactive contamination of vegetation cover
  in (mostly) urban environment
-version=0.1.1
+version=0.1.2
 author=Jakub Brom, ENKI o.p.s. Třeboň
 email=jbrom@lanres.cz
 
@@ -22,6 +22,8 @@ repository=https://github.com/JakubBrom/UrbanSARCA
 hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
 changelog=
+    0.1.2 (201021)
+        Bugs fixed
     0.1.1 (201009
         Translation to Czech added
         Some small changes, bugs fixed - selection of radionuclide etc.
