@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.1.2
+                0.1.3
               </div>
             
           
@@ -218,11 +218,89 @@ budoucna předpokládáme nahrazení uvedeného vztahu komplexnějším modelem.
 </div>
 <div class="section" id="index-listove-plochy">
 <h3>Index listové plochy<a class="headerlink" href="#index-listove-plochy" title="Permalink to this headline">¶</a></h3>
-<p>Index listové plochy (bezrozm.) je počítán pomocí jednoduchého lineárního
-vztahu mezi listovou plochou a spektrálním indexem NDVI:</p>
+<p>Index listové plochy (bezrozm.) je počítán na základě
+spektrálních dat v červené a blízké infračervené oblasti. Jedná se o
+jednoduchý přístup, který nicméně dobře koresponduje především
+indexem listové plochy bylinné vegetace, zejm. polních plodin.
+Do modelu byla přidána možnost volby metody výpočtu indexu
+listové plochy. K dispozici je osm metod:</p>
+<p><strong>1. Jednoduchá metoda (Simple method)</strong></p>
+<p>Metoda využívá lineární vztah mezi listovou plochou a spektrálním
+indexem NDVI:</p>
 <div class="math">
-<p><img src="_images/math/6e13d81fbc01999a77f054e4e799679bea37f28c.svg" alt="LAI=4.9\cdot NDVI-0.46"/></p>
-</div></div>
+<p><img src="_images/math/77bf59b043ec5b93bc1d5237b05825695a9b515a.svg" alt="LAI=4.9 \cdot NDVI-0.46"/></p>
+</div><p>Metoda poskytuje vcelku univerzální výsledky pro nízkou i vysokou
+lesní vegetaci. Ostatní jmenované metody jsou vhodné spíše pro polní
+kultury</p>
+<p><strong>2. Pôças</strong></p>
+<p>Podle Pôças et al. (2014).</p>
+<div class="math">
+<p><img src="_images/math/d2c0a19d16e0633cf58cf0e1a5689a33c1bab8e9.svg" alt="LAI =
+  \begin{cases}
+    11 \cdot SAVI^3         &amp; SAVI &gt; 0;\  SAVI \leq 0.817\\
+    6                       &amp; SAVI &gt; 0.817
+  \end{cases}"/></p>
+</div><p>kde <img class="math" src="_images/math/36b05d719d4162c9811f1fe775ceb318cfd2f25f.svg" alt="SAVI"/> je spektrální index (Soil Adjusted Vegetation Index;
+Huete, 1988):</p>
+<div class="math">
+<p><img src="_images/math/14b8d8b2ff387e9910c22be5c0cabef1f7c3781a.svg" alt="SAVI = \frac{(1 + L) \cdot (R_{NIR} - R_{RED})}{L + R_{NIR}+R_{RED}}"/></p>
+</div><p>kde <img class="math" src="_images/math/ee3531d0ad227d273ac2c70cc7789b0b3b97e364.svg" alt="L"/> je konstanta (<img class="math" src="_images/math/f1eb70e914a82b25734d5df90a44321b76f8bed4.svg" alt="L=0.5"/>).</p>
+<p><strong>3. Bastiaanssen</strong></p>
+<p>Podle Bastiaanssena et al. (1998)</p>
+<div class="math">
+<p><img src="_images/math/3fc986a1d01a48661d1c2232ac93bb0bd2f35e6e.svg" alt="LAI =
+  \begin{cases}
+    -\frac{\ln \frac{0.61-SAVI}{0.51}}{0.91}
+        &amp; SAVI &gt;0;\  SAVI\leq 0.61\\
+    6                       &amp; SAVI &gt; 0.61
+  \end{cases}"/></p>
+</div><p><strong>4. Jafaar</strong></p>
+<p>Podle Jafaar et al. (2019).</p>
+<div class="math">
+<p><img src="_images/math/a357173ae2dd726e6517559171c166ff9aa1640d.svg" alt="LAI_1=
+    \begin{cases}
+        11 \cdot SAVI^3         &amp; SAVI &gt; 0;\  SAVI \leq 0.817\\
+        6                       &amp; SAVI &gt; 0.817
+    \end{cases}"/></p>
+</div><div class="math">
+<p><img src="_images/math/d77923c182f9fbde807c1ab136b76197ef5431c2.svg" alt="LAI_2 =
+  \begin{cases}
+    -\frac{\ln \frac{0.61-SAVI}{0.51}}{0.91}
+        &amp; SAVI &gt;0;\  SAVI\leq 0.61\\
+    6                       &amp; SAVI &gt; 0.61
+  \end{cases}"/></p>
+</div><div class="math">
+<p><img src="_images/math/077c85bff21ead21e20bad22d007bdff687ae150.svg" alt="LAI = \frac{LAI_1 + LAI_2}{2}"/></p>
+</div><p><strong>5. Anderson</strong></p>
+<p>Podle Andersson et al. (2004).</p>
+<div class="math">
+<p><img src="_images/math/978c5244fe83f5a1073fd2199fae6153dbc42636.svg" alt="LAI = (4\cdot OSAVI -0.8) \cdot (1 + 4.73 \cdot 10^{-6}\mathrm{e}^{15.64 \cdot OSAVI})"/></p>
+</div><p>kde <img class="math" src="_images/math/3f98f45fa6013d550297e8925af1ce55454e4834.svg" alt="OSAVI"/> je spektrální index (Optimized Soil Adjusted
+Vegetation Index; Rondeaux et al., 1996):</p>
+<div class="math">
+<p><img src="_images/math/5e9f7d847055ef17a941a17a90bceb09f1176cce.svg" alt="OSAVI = \frac{R_{NIR} - R_{RED}}{0.16 + R_{NIR}+R_{RED}}"/></p>
+</div><p><strong>6. Carrasco</strong></p>
+<p>Podle Carrasco-Benavides et al. (2014).</p>
+<div class="math">
+<p><img src="_images/math/4d98b3c25852ac7d8e6ff2c7cc73095fdfd41e27.svg" alt="LAI = 1.2 - 3.08\mathrm{e}^{-2013.35 \cdot NDVI^{6.41}}"/></p>
+</div><p><strong>7. Turner</strong></p>
+<p>Podle Turner et al. (1999).</p>
+<div class="math">
+<p><img src="_images/math/91a33c16833d8ed2088cc2006b96683e8348df68.svg" alt="LAI=0.5724 + 0.0989 \cdot NDVI - 0.0114 \cdot NDVI^2 + 0.0004\cdot NDVI^3"/></p>
+</div><p><strong>8. Haboudane</strong></p>
+<div class="math">
+<p><img src="_images/math/996d4f95739b06846f972de9800218709a1677e5.svg" alt="LAI = 0.0918^{6.0002 \cdot RDVI}"/></p>
+</div><p>kde <img class="math" src="_images/math/bb7fd987a869d964a03efd491d5c4c3812d86d4f.svg" alt="RDVI"/> je spektrální index (Renormalized Difference
+Vegetation Index; Roujean and Breon, 1995):</p>
+<div class="math">
+<p><img src="_images/math/a2771d652666dffa75039eb067483b0fc4657079.svg" alt="RDVI = \frac{R_{NIR} - R_{RED}}{\sqrt{R_{NIR} + R_{RED}}}"/></p>
+</div><p><strong>9. Brom</strong></p>
+<div class="math">
+<p><img src="_images/math/6dda87c9f5ee249cb8e9b2ff50cccd9e8d67adf3.svg" alt="LAI = \frac{6.0}{1 + \mathrm{e}^{-(8 \cdot SAVI - 5)}}"/></p>
+</div><p>Uvedený přístup je experimentální. Metoda velmi dobře koresponduje s
+přístupy podle Bastiaanssena, Jafaara a Pôçase, nicméně je velmi
+senzitivní na hodnoty indexů v exponentu funkce.</p>
+</div>
 <div class="section" id="kontaminace-zelene-a-pudy-intercepcni-faktor">
 <h3>Kontaminace zeleně a půdy, intercepční faktor<a class="headerlink" href="#kontaminace-zelene-a-pudy-intercepcni-faktor" title="Permalink to this headline">¶</a></h3>
 <p>Pro rozhodování o množství depozice radioaktivního materiálu na povrchu
@@ -293,17 +371,54 @@ radiačně mimořádné situace podle vyhlášky 389/2010 Sb. o radiační ochra
 </div>
 <div class="section" id="prehled-pouzite-literatury">
 <h2>Přehled použité literatury<a class="headerlink" href="#prehled-pouzite-literatury" title="Permalink to this headline">¶</a></h2>
+<p><em>Anderson, M., Neale, C., Li, F., Norman, J., Kustas, W., Jayanthi,
+H., Chavez, J., 2004. Upscaling ground observations of vegetation
+water content, canopy height, and leaf area index during SMEX02 using
+aircraft and Landsat imagery. Remote Sensing of Environment 92,
+447–464. https://doi.org/10.1016/j.rse.2004.03.019</em></p>
+<p><em>Bastiaanssen, W.G.M., Menenti, M., Feddes, R.A., Holtslag, A.A.M.,
+1998. A remote sensing surface energy balance algorithm for land (
+SEBAL). 1. Formulation. Journal of Hydrology 212–213, 198–212.
+https://doi.org/10.1016/S0022-1694(98)00253-4</em></p>
+<p><em>Carrasco-Benavides, M., Ortega-Farías, S., Lagos, L., Kleissl, J.,
+Morales-Salinas, L., Kilic, A., 2014. Parameterization of the
+Satellite-Based Model (METRIC) for the Estimation of Instantaneous
+Surface Energy Balance Components over a Drip-Irrigated Vineyard.
+Remote Sensing 6, 11342–11371. https://doi.org/10.3390/rs61111342</em></p>
+<p><em>Huete A.R. (1988): A soil-adjusted vegetation index (SAVI) Remote
+Sensing of Environment 27, 47-57.</em></p>
+<p><em>Jaafar, H.H., Ahmad, F.A., 2019. Time series trends of Landsat-based
+ET using automated calibration in METRIC and SEBAL: The Bekaa
+Valley, Lebanon. Remote Sensing of Environment S0034425718305947.
+https://doi.org/10.1016/j.rse.2018.12.033</em></p>
 <p><em>Muller, H., Prohl, G., 1993. Ecosys-87: A dynamic model for assessing
 radiological consequences of nuclear accidents. Health Phys. 64, 232–252.</em></p>
+<p><em>Pôças, I., Paço, T.A., Cunha, M., Andrade, J.A., Silvestre, J.,
+Sousa, A., Santos, F.L., Pereira, L.S., Allen, R.G., 2014.
+Satellite-based evapotranspiration of a super-intensive olive
+orchard:  Application of METRIC algorithms. Biosystems Engineering
+128, 69–81. https://doi.org/10.1016/j.biosystemseng.2014.06.019</em></p>
 <p><em>Pröhl, G., 2003. Radioactivity in the terestrial environment, in: Scott, E.M.
 (Ed.), Modelling Radioactivity in the Environment. Elsevier, Amsterdam;
 Boston, pp. 87–108.</em></p>
+<p><em>Rondeaux G., Steven M., Baret F. (1996): Optimisation of
+soil-adjusted vegetation indices Remote Sensing of Environment,
+55 (1996), pp. 95-107</em></p>
+<p><em>Roujean, J.-L., Breon, F.-M., 1995. Estimating PAR absorbed
+by vegetation from bidirectional reflectance measurements.
+Remote Sensing of Environment 51, 375–384.
+https://doi.org/10.1016/0034-4257(94)00114-3</em></p>
 <p><em>Rouse Jr, J., Haas, R., Schell, J., Deering, D., 1973. Monitoring vegetation
 systems in the Great Plains with ERTS In Third Earth Resources Technology
 Satellite-1, in: Third Earth Resources Technology Satellite-1 Symposium: The
 Proceedings of a Symposium Held by Goddard Space Flight Center at Washington,
 DC on December 10-14, 1973: Prepared at Goddard Space Flight Center.
 Scientific and Technical Information Office, NASA, pp. 309–317.</em></p>
+<p><em>Turner, D.P., Cohen, W.B., Kennedy, R.E., Fassnacht, K.S., Briggs,
+J.M., 1999. Relationships between Leaf Area Index and Landsat TM
+Spectral Vegetation Indices across Three Temperate Zone Sites.
+Remote Sensing of Environment 70, 52–68.
+https://doi.org/10.1016/S0034-4257(99)00057-7</em></p>
 <p><em>Vyhláška 389/2012 Sb. o radiační ochraně, 2012.</em></p>
 </div>
 </div>

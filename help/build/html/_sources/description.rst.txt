@@ -71,12 +71,130 @@ budoucna předpokládáme nahrazení uvedeného vztahu komplexnějším modelem.
 Index listové plochy
 .....................
 
-Index listové plochy (bezrozm.) je počítán pomocí jednoduchého lineárního
-vztahu mezi listovou plochou a spektrálním indexem NDVI:
+Index listové plochy (bezrozm.) je počítán na základě
+spektrálních dat v červené a blízké infračervené oblasti. Jedná se o
+jednoduchý přístup, který nicméně dobře koresponduje především
+indexem listové plochy bylinné vegetace, zejm. polních plodin.
+Do modelu byla přidána možnost volby metody výpočtu indexu
+listové plochy. K dispozici je osm metod:
+
+**1. Jednoduchá metoda (Simple method)**
+
+Metoda využívá lineární vztah mezi listovou plochou a spektrálním
+indexem NDVI:
 
 .. math::
 
-    LAI=4.9\cdot NDVI-0.46
+    LAI=4.9 \cdot NDVI-0.46
+
+Metoda poskytuje vcelku univerzální výsledky pro nízkou i vysokou
+lesní vegetaci. Ostatní jmenované metody jsou vhodné spíše pro polní
+kultury
+
+**2. Pôças**
+
+Podle Pôças et al. (2014).
+
+.. math::
+
+    LAI =
+      \begin{cases}
+        11 \cdot SAVI^3         & SAVI > 0;\  SAVI \leq 0.817\\
+        6                       & SAVI > 0.817
+      \end{cases}
+
+kde :math:`SAVI` je spektrální index (Soil Adjusted Vegetation Index;
+Huete, 1988):
+
+.. math::
+    SAVI = \frac{(1 + L) \cdot (R_{NIR} - R_{RED})}{L + R_{NIR}+R_{RED}}
+
+kde :math:`L` je konstanta (:math:`L=0.5`).
+
+
+**3. Bastiaanssen**
+
+Podle Bastiaanssena et al. (1998)
+
+.. math::
+
+    LAI =
+      \begin{cases}
+        -\frac{\ln \frac{0.61-SAVI}{0.51}}{0.91}
+            & SAVI >0;\  SAVI\leq 0.61\\
+        6                       & SAVI > 0.61
+      \end{cases}
+
+**4. Jafaar**
+
+Podle Jafaar et al. (2019).
+
+.. math::
+    LAI_1=
+        \begin{cases}
+            11 \cdot SAVI^3         & SAVI > 0;\  SAVI \leq 0.817\\
+            6                       & SAVI > 0.817
+        \end{cases}
+
+.. math::
+    LAI_2 =
+      \begin{cases}
+        -\frac{\ln \frac{0.61-SAVI}{0.51}}{0.91}
+            & SAVI >0;\  SAVI\leq 0.61\\
+        6                       & SAVI > 0.61
+      \end{cases}
+
+.. math::
+    LAI = \frac{LAI_1 + LAI_2}{2}
+
+**5. Anderson**
+
+Podle Andersson et al. (2004).
+
+.. math::
+    LAI = (4\cdot OSAVI -0.8) \cdot (1 + 4.73 \cdot 10^{-6}\mathrm{e}^{15.64 \cdot OSAVI})
+
+kde :math:`OSAVI` je spektrální index (Optimized Soil Adjusted
+Vegetation Index; Rondeaux et al., 1996):
+
+.. math::
+    OSAVI = \frac{R_{NIR} - R_{RED}}{0.16 + R_{NIR}+R_{RED}}
+
+**6. Carrasco**
+
+Podle Carrasco-Benavides et al. (2014).
+
+.. math::
+    LAI = 1.2 - 3.08\mathrm{e}^{-2013.35 \cdot NDVI^{6.41}}
+
+**7. Turner**
+
+Podle Turner et al. (1999).
+
+.. math::
+    LAI=0.5724 + 0.0989 \cdot NDVI - 0.0114 \cdot NDVI^2 + 0.0004\cdot NDVI^3
+
+
+**8. Haboudane**
+
+.. math::
+    LAI = 0.0918^{6.0002 \cdot RDVI}
+
+kde :math:`RDVI` je spektrální index (Renormalized Difference
+Vegetation Index; Roujean and Breon, 1995):
+
+.. math::
+    RDVI = \frac{R_{NIR} - R_{RED}}{\sqrt{R_{NIR} + R_{RED}}}
+
+**9. Brom**
+
+.. math::
+    LAI = \frac{6.0}{1 + \mathrm{e}^{-(8 \cdot SAVI - 5)}}
+
+Uvedený přístup je experimentální. Metoda velmi dobře koresponduje s
+přístupy podle Bastiaanssena, Jafaara a Pôçase, nicméně je velmi
+senzitivní na hodnoty indexů v exponentu funkce.
+
 
 Kontaminace zeleně a půdy, intercepční faktor
 ..............................................
@@ -163,12 +281,52 @@ radiačně mimořádné situace podle vyhlášky 389/2010 Sb. o radiační ochra
 Přehled použité literatury
 --------------------------
 
+*Anderson, M., Neale, C., Li, F., Norman, J., Kustas, W., Jayanthi,
+H., Chavez, J., 2004. Upscaling ground observations of vegetation
+water content, canopy height, and leaf area index during SMEX02 using
+aircraft and Landsat imagery. Remote Sensing of Environment 92,
+447–464. https://doi.org/10.1016/j.rse.2004.03.019*
+
+*Bastiaanssen, W.G.M., Menenti, M., Feddes, R.A., Holtslag, A.A.M.,
+1998. A remote sensing surface energy balance algorithm for land (
+SEBAL). 1. Formulation. Journal of Hydrology 212–213, 198–212.
+https://doi.org/10.1016/S0022-1694(98)00253-4*
+
+*Carrasco-Benavides, M., Ortega-Farías, S., Lagos, L., Kleissl, J.,
+Morales-Salinas, L., Kilic, A., 2014. Parameterization of the
+Satellite-Based Model (METRIC) for the Estimation of Instantaneous
+Surface Energy Balance Components over a Drip-Irrigated Vineyard.
+Remote Sensing 6, 11342–11371. https://doi.org/10.3390/rs61111342*
+
+*Huete A.R. (1988): A soil-adjusted vegetation index (SAVI) Remote
+Sensing of Environment 27, 47-57.*
+
+*Jaafar, H.H., Ahmad, F.A., 2019. Time series trends of Landsat-based
+ET using automated calibration in METRIC and SEBAL: The Bekaa
+Valley, Lebanon. Remote Sensing of Environment S0034425718305947.
+https://doi.org/10.1016/j.rse.2018.12.033*
+
 *Muller, H., Prohl, G., 1993. Ecosys-87: A dynamic model for assessing
 radiological consequences of nuclear accidents. Health Phys. 64, 232–252.*
+
+*Pôças, I., Paço, T.A., Cunha, M., Andrade, J.A., Silvestre, J.,
+Sousa, A., Santos, F.L., Pereira, L.S., Allen, R.G., 2014.
+Satellite-based evapotranspiration of a super-intensive olive
+orchard:  Application of METRIC algorithms. Biosystems Engineering
+128, 69–81. https://doi.org/10.1016/j.biosystemseng.2014.06.019*
 
 *Pröhl, G., 2003. Radioactivity in the terestrial environment, in: Scott, E.M.
 (Ed.), Modelling Radioactivity in the Environment. Elsevier, Amsterdam;
 Boston, pp. 87–108.*
+
+*Rondeaux G., Steven M., Baret F. (1996): Optimisation of
+soil-adjusted vegetation indices Remote Sensing of Environment,
+55 (1996), pp. 95-107*
+
+*Roujean, J.-L., Breon, F.-M., 1995. Estimating PAR absorbed
+by vegetation from bidirectional reflectance measurements.
+Remote Sensing of Environment 51, 375–384.
+https://doi.org/10.1016/0034-4257(94)00114-3*
 
 *Rouse Jr, J., Haas, R., Schell, J., Deering, D., 1973. Monitoring vegetation
 systems in the Great Plains with ERTS In Third Earth Resources Technology
@@ -176,5 +334,11 @@ Satellite-1, in: Third Earth Resources Technology Satellite-1 Symposium: The
 Proceedings of a Symposium Held by Goddard Space Flight Center at Washington,
 DC on December 10-14, 1973: Prepared at Goddard Space Flight Center.
 Scientific and Technical Information Office, NASA, pp. 309–317.*
+
+*Turner, D.P., Cohen, W.B., Kennedy, R.E., Fassnacht, K.S., Briggs,
+J.M., 1999. Relationships between Leaf Area Index and Landsat TM
+Spectral Vegetation Indices across Three Temperate Zone Sites.
+Remote Sensing of Environment 70, 52–68.
+https://doi.org/10.1016/S0034-4257(99)00057-7*
 
 *Vyhláška 389/2012 Sb. o radiační ochraně, 2012.*

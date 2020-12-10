@@ -7,11 +7,35 @@ name=Urban Green SARCA
 qgisMinimumVersion=3.0
 description=Plugin for analysis of radioactive contamination of vegetation cover
  in (mostly) urban environment
-version=0.1.2
+version=0.1.3
 author=Jakub Brom, ENKI o.p.s. Třeboň
 email=jbrom@lanres.cz
 
-about=The Urban Green SARCA (USG) module is a  GIS tool created for the purpose of estimating the deposition of radionuclides on the surface of vegetation and soil, or in areas without vegetation in the early phase of a radiation accident. The module makes it possible to estimate the radioactive contamination of the vegetation cover by means of satellite images, total radioactivity deposition data and precipitation amount data during the radiation accident. USG provides a “first view” on spatial information of a radioactive contamination of vegetation and soils within large areas in a very simple way and thus it is a usable tool for decision makers and authorities in case of radiation accident. The usage of module is suitable mostly for areas where the vegetation cover and amount of biomass is not very well documented, e.g. urban areas.
+about=The Urban Green SARCA (USG) module is a  GIS tool created for the
+  purpose of estimating the deposition of radionuclides on the surface
+  of vegetation and soil, or in areas without vegetation in the early
+  phase of a radiation accident. The module makes it possible to
+  estimate the radioactive contamination of the vegetation cover by
+  means of satellite images, total radioactivity deposition data and
+  precipitation amount data during the radiation accident. USG provides
+  a “first sight” on spatial information of a radioactive contamination
+  of vegetation and soils within large areas in a very simple way and
+  thus it is a usable tool for decision makers and authorities in case
+  of radiation accident. The usage of module is suitable mostly for
+  areas where the vegetation cover and amount of biomass is not very
+  well documented, e.g. urban areas.
+
+  Outputs:
+  - Amount of biomass (t/ha)
+  - Interception factor
+  - Biomass contamination (Bq/m2)
+  - Soil contamination (Bq/m2)
+  - Mass contamination (Bq/kg)
+  - Mask of hygienic limit exceeding
+  - Mask of reference levels
+
+  QGIS module Urban Green SARCA development was supported by project of
+  Ministry of the Interior of the Czech Republic No. VH20172020015
 
 tracker=https://github.com/JakubBrom/UrbanSARCA/issues
 repository=https://github.com/JakubBrom/UrbanSARCA
@@ -22,8 +46,15 @@ repository=https://github.com/JakubBrom/UrbanSARCA
 hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
 changelog=
+    0.1.3 (201210)
+        Help for Windows platform has been provided
+        Selection of LAI method which is used for calculation is now
+        available. Description of LAI methods has beed added to
+        documentation.
+        Bug fixes
+        Some more information added
     0.1.2 (201021)
-        Bugs fixed
+        Bug fixes
     0.1.1 (201009
         Translation to Czech added
         Some small changes, bugs fixed - selection of radionuclide etc.

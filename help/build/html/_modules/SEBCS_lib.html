@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                0.1.2
+                0.1.3
               </div>
             
           
@@ -514,11 +514,11 @@
 		<span class="n">ignore_zero</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">seterr</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
 
 		<span class="k">try</span><span class="p">:</span>
-			<span class="n">savi</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">L</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">nir</span> <span class="o">-</span> <span class="n">red</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">L</span> <span class="o">+</span> <span class="n">nir</span> <span class="o">+</span> <span class="n">red</span><span class="p">)</span>
+			<span class="n">osavi</span> <span class="o">=</span> <span class="p">(</span><span class="n">nir</span> <span class="o">-</span> <span class="n">red</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">L</span> <span class="o">+</span> <span class="n">nir</span> <span class="o">+</span> <span class="n">red</span><span class="p">)</span>
 		<span class="k">except</span> <span class="ne">ArithmeticError</span><span class="p">:</span>
 			<span class="k">raise</span> <span class="ne">ArithmeticError</span><span class="p">(</span><span class="s2">&quot;SAVI has not been calculated.&quot;</span><span class="p">)</span>
 
-		<span class="k">return</span> <span class="n">savi</span></div>
+		<span class="k">return</span> <span class="n">osavi</span></div>
 
 <div class="viewcode-block" id="VegIndices.viNDMI"><a class="viewcode-back" href="../libs.html#SEBCS_lib.VegIndices.viNDMI">[docs]</a>	<span class="k">def</span> <span class="nf">viNDMI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nir</span><span class="p">,</span> <span class="n">swir1</span><span class="p">):</span>
 		<span class="sd">&quot;&quot;&quot;</span>
@@ -603,12 +603,8 @@
 
 		<span class="k">try</span><span class="p">:</span>
 			<span class="n">rdvi</span> <span class="o">=</span> <span class="p">(</span><span class="n">nir</span> <span class="o">-</span> <span class="n">red</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">nir</span> <span class="o">+</span> <span class="n">red</span><span class="p">)</span>
-			<span class="n">rdvi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">rdvi</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rdvi</span><span class="p">)</span>  <span class="c1"># replacement</span>
-			<span class="c1"># inf values</span>
-			<span class="c1"># by 0</span>
-			<span class="n">rdvi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">rdvi</span> <span class="o">==</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rdvi</span><span class="p">)</span>  <span class="c1"># replacement</span>
-		<span class="c1"># -inf</span>
-		<span class="c1"># values by 0</span>
+			<span class="n">rdvi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">rdvi</span><span class="p">)</span>
+
 		<span class="k">except</span> <span class="ne">ArithmeticError</span><span class="p">:</span>
 			<span class="k">raise</span> <span class="ne">ArithmeticError</span><span class="p">(</span><span class="s2">&quot;RDVI has not been calculated.&quot;</span><span class="p">)</span>
 
@@ -633,7 +629,7 @@
 
 		<span class="k">return</span> <span class="n">Fc</span></div>
 
-<div class="viewcode-block" id="VegIndices.LAI"><a class="viewcode-back" href="../libs.html#SEBCS_lib.VegIndices.LAI">[docs]</a>	<span class="k">def</span> <span class="nf">LAI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">red</span><span class="p">,</span> <span class="n">nir</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+<div class="viewcode-block" id="VegIndices.LAI"><a class="viewcode-back" href="../libs.html#SEBCS_lib.VegIndices.LAI">[docs]</a>	<span class="k">def</span> <span class="nf">LAI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">red</span><span class="p">,</span> <span class="n">nir</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
 		<span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">		Leaf Area Index (LAI) calculated according to several methods.</span>
 
@@ -642,13 +638,15 @@
 <span class="sd">		:param nir: Spectral reflectance in NIR region (rel.)</span>
 <span class="sd">		:type nir: numpy.ndarray</span>
 <span class="sd">		:param method: Method of LAI calculation:\n</span>
-<span class="sd">				* 1: Pôças</span>
-<span class="sd">				* 2: Bastiaanssen</span>
-<span class="sd">				* 3: Jafaar (default)</span>
-<span class="sd">				* 4: Anderson</span>
-<span class="sd">				* 5: vineyard</span>
-<span class="sd">				* 6: Carrasco</span>
-<span class="sd">				* 7: Turner</span>
+<span class="sd">				* 0: Pôças</span>
+<span class="sd">				* 1: Bastiaanssen</span>
+<span class="sd">				* 2: Jafaar (default)</span>
+<span class="sd">				* 3: Anderson</span>
+<span class="sd">				* 4: vineyard</span>
+<span class="sd">				* 5: Carrasco</span>
+<span class="sd">				* 6: Turner</span>
+<span class="sd">				* 7: Haboudane</span>
+<span class="sd">				* 8: Brom (experimental)</span>
 <span class="sd">		:type method: int</span>
 
 <span class="sd">		:return: Leaf Area Index (LAI) :math:`(m^2.m^{-2})`</span>
@@ -695,15 +693,15 @@
 		<span class="c1"># 5:&#39;vineyard&#39;, 6:&#39;Carrasco&#39;, 7:&#39;Turner&#39;, 8:&#39;Haboudane&#39;,</span>
 		<span class="c1"># 9:&#39;Brom&#39;}</span>
 
-		<span class="k">if</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">1</span><span class="p">:</span>     <span class="c1"># Pôças</span>
+		<span class="k">if</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">0</span><span class="p">:</span>     <span class="c1"># Pôças</span>
 			<span class="n">LAI</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">savi</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">11.0</span> <span class="o">*</span> <span class="n">savi</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 			<span class="n">LAI</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">savi</span> <span class="o">&gt;</span> <span class="mf">0.817</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">LAI</span><span class="p">)</span>
 
-		<span class="k">elif</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">2</span><span class="p">:</span>   <span class="c1"># Bastiaanssen</span>
+		<span class="k">elif</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">1</span><span class="p">:</span>   <span class="c1"># Bastiaanssen</span>
 			<span class="n">LAI</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">savi</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="mf">0.61</span> <span class="o">-</span> <span class="n">savi</span><span class="p">)</span><span class="o">/</span><span class="mf">0.51</span><span class="p">)</span><span class="o">/</span><span class="mf">0.91</span> <span class="o">*</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
 			<span class="n">LAI</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">savi</span> <span class="o">&gt;=</span> <span class="mf">0.61</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">LAI</span><span class="p">)</span>
 
-		<span class="k">elif</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">3</span><span class="p">:</span>   <span class="c1"># Jafaar</span>
+		<span class="k">elif</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">2</span><span class="p">:</span>   <span class="c1"># Jafaar</span>
 			<span class="n">LAI_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">savi</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">11.0</span> <span class="o">*</span> <span class="n">savi</span> <span class="o">**</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 			<span class="n">LAI_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">savi</span> <span class="o">&gt;</span> <span class="mf">0.817</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">LAI_1</span><span class="p">)</span>
 
@@ -713,22 +711,22 @@
 
 			<span class="n">LAI</span> <span class="o">=</span> <span class="p">(</span><span class="n">LAI_1</span> <span class="o">+</span> <span class="n">LAI_2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
 
-		<span class="k">elif</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">4</span><span class="p">:</span>   <span class="c1"># Anderson</span>
+		<span class="k">elif</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">3</span><span class="p">:</span>   <span class="c1"># Anderson</span>
 			<span class="n">LAI</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">osavi</span> <span class="o">-</span> <span class="mf">0.8</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mf">4.73e-6</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">15.64</span> <span class="o">*</span> <span class="n">osavi</span><span class="p">))</span>
 
-		<span class="k">elif</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">5</span><span class="p">:</span>   <span class="c1"># vineyard</span>
+		<span class="k">elif</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">4</span><span class="p">:</span>   <span class="c1"># vineyard</span>
 			<span class="n">LAI</span> <span class="o">=</span> <span class="mf">4.9</span> <span class="o">*</span> <span class="n">ndvi</span> <span class="o">-</span> <span class="mf">0.46</span>
 
-		<span class="k">elif</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">6</span><span class="p">:</span>   <span class="c1"># Carrasco</span>
+		<span class="k">elif</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">5</span><span class="p">:</span>   <span class="c1"># Carrasco</span>
 			<span class="n">LAI</span> <span class="o">=</span> <span class="mf">1.2</span> <span class="o">-</span> <span class="mf">3.08</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">2013.35</span> <span class="o">*</span> <span class="n">ndvi</span> <span class="o">**</span> <span class="mf">6.41</span><span class="p">)</span>
 
-		<span class="k">elif</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">7</span><span class="p">:</span>   <span class="c1"># Turner</span>
+		<span class="k">elif</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">6</span><span class="p">:</span>   <span class="c1"># Turner</span>
 			<span class="n">LAI</span> <span class="o">=</span> <span class="mf">0.5724</span> <span class="o">+</span> <span class="mf">0.0989</span> <span class="o">*</span> <span class="n">ndvi</span> <span class="o">-</span> <span class="mf">0.0114</span> <span class="o">*</span> <span class="n">ndvi</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.0004</span> <span class="o">*</span> <span class="n">ndvi</span><span class="o">**</span><span class="mi">3</span>
 
-		<span class="k">elif</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">8</span><span class="p">:</span>	<span class="c1"># Haboudane</span>
+		<span class="k">elif</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">7</span><span class="p">:</span>	<span class="c1"># Haboudane</span>
 			<span class="n">LAI</span> <span class="o">=</span> <span class="mf">0.0918</span> <span class="o">**</span> <span class="p">(</span><span class="mf">6.0002</span> <span class="o">*</span> <span class="n">rdvi</span><span class="p">)</span>
 
-		<span class="k">elif</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">9</span><span class="p">:</span>	<span class="c1"># Brom</span>
+		<span class="k">elif</span> <span class="n">method</span> <span class="ow">is</span> <span class="mi">8</span><span class="p">:</span>	<span class="c1"># Brom</span>
 			<span class="n">LAI</span> <span class="o">=</span> <span class="mf">6.0</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">savi</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)))</span>
 			<span class="c1"># Method proposed by Brom (mathematical definition only,</span>
 			<span class="c1"># not tested). Good approximation with another methods (1, 2, 3) but</span>

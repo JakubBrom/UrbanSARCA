@@ -7,8 +7,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>363</width>
-    <height>753</height>
+    <width>367</width>
+    <height>869</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -72,194 +72,11 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>343</width>
-         <height>684</height>
+         <width>347</width>
+         <height>800</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_7">
-        <item row="0" column="0">
-         <widget class="QGroupBox" name="groupBox">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="title">
-           <string>Satellite data</string>
-          </property>
-          <layout class="QGridLayout" name="gridLayout_4">
-           <item row="3" column="0">
-            <widget class="QLabel" name="label_3">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;NIR band (rel., ~ 850 &amp;mu;m)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QPushButton" name="pb_nir">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>30</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>...</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_2">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Red band (rel., ~680 &amp;mu;m)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QPushButton" name="pb_red">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>30</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>...</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QgsMapLayerComboBox" name="cbox_red"/>
-           </item>
-           <item row="4" column="0">
-            <widget class="QgsMapLayerComboBox" name="cbox_nir"/>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QGroupBox" name="groupBox_2">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="title">
-           <string>Radioactive deposition</string>
-          </property>
-          <layout class="QGridLayout" name="gridLayout_3">
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_6">
-             <property name="enabled">
-              <bool>true</bool>
-             </property>
-             <property name="text">
-              <string>Type of contaminant (radionuclide)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QPushButton" name="pb_depo">
-             <property name="maximumSize">
-              <size>
-               <width>30</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>...</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QComboBox" name="cbox_cont">
-             <property name="enabled">
-              <bool>true</bool>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <item>
-              <property name="text">
-               <string extracomment="137Cs">Cs</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string extracomment="90Sr">Sr</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string extracomment="131I">I</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string extracomment="130Ba">Ba</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Another radionuclides</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="label">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Deposition layer (Bq.m&lt;span style=&quot; vertical-align:super;&quot;&gt;-2&lt;/span&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QgsMapLayerComboBox" name="cbox_depo"/>
-           </item>
-          </layout>
-         </widget>
-        </item>
         <item row="2" column="0">
          <widget class="QGroupBox" name="groupBox_3">
           <property name="sizePolicy">
@@ -461,7 +278,190 @@ for an area of interest (mm)</string>
           </layout>
          </widget>
         </item>
-        <item row="4" column="0">
+        <item row="1" column="0">
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Radioactive deposition</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="text">
+              <string>Type of contaminant (radionuclide)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="pb_depo">
+             <property name="maximumSize">
+              <size>
+               <width>30</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>...</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QComboBox" name="cbox_cont">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <item>
+              <property name="text">
+               <string extracomment="137Cs">Cs</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string extracomment="90Sr">Sr</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string extracomment="131I">I</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string extracomment="130Ba">Ba</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Another radionuclides</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Deposition layer (Bq.m&lt;span style=&quot; vertical-align:super;&quot;&gt;-2&lt;/span&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QgsMapLayerComboBox" name="cbox_depo"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Satellite data</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;NIR band (rel., ~ 850 &amp;mu;m)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QPushButton" name="pb_nir">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>30</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>...</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Red band (rel., ~680 &amp;mu;m)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="pb_red">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>30</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>...</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QgsMapLayerComboBox" name="cbox_red"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QgsMapLayerComboBox" name="cbox_nir"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="5" column="0">
          <widget class="QGroupBox" name="groupBox_5">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
@@ -498,7 +498,7 @@ for an area of interest (mm)</string>
           </layout>
          </widget>
         </item>
-        <item row="5" column="0">
+        <item row="6" column="0">
          <spacer name="verticalSpacer">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
@@ -513,6 +513,83 @@ for an area of interest (mm)</string>
            </size>
           </property>
          </spacer>
+        </item>
+        <item row="4" column="0">
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="title">
+           <string>Leaf Area Index method</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_8">
+           <item row="0" column="0">
+            <widget class="QComboBox" name="cbox_lai">
+             <property name="currentIndex">
+              <number>4</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>Pocas</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Bastiaanssen</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Jafaar</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Anderson</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Simple - default</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Carrasco</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Turner</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Haboudane</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Brom</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
         </item>
        </layout>
       </widget>

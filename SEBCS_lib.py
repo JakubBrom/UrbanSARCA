@@ -360,11 +360,11 @@ class VegIndices:
 		ignore_zero = np.seterr(all="ignore")
 
 		try:
-			savi = (1 + L) * (nir - red) / (L + nir + red)
+			osavi = (nir - red) / (L + nir + red)
 		except ArithmeticError:
 			raise ArithmeticError("SAVI has not been calculated.")
 
-		return savi
+		return osavi
 
 	def viNDMI(self, nir, swir1):
 		"""
@@ -449,12 +449,8 @@ class VegIndices:
 
 		try:
 			rdvi = (nir - red) / np.sqrt(nir + red)
-			rdvi = np.where(rdvi == np.inf, 0, rdvi)  # replacement
-			# inf values
-			# by 0
-			rdvi = np.where(rdvi == -np.inf, 0, rdvi)  # replacement
-		# -inf
-		# values by 0
+			rdvi = np.nan_to_num(rdvi)
+
 		except ArithmeticError:
 			raise ArithmeticError("RDVI has not been calculated.")
 
@@ -479,7 +475,7 @@ class VegIndices:
 
 		return Fc
 
-	def LAI(self, red, nir, method=3):
+	def LAI(self, red, nir, method=2):
 		"""
 		Leaf Area Index (LAI) calculated according to several methods.
 
@@ -488,13 +484,15 @@ class VegIndices:
 		:param nir: Spectral reflectance in NIR region (rel.)
 		:type nir: numpy.ndarray
 		:param method: Method of LAI calculation:\n
-				* 1: Pôças
-				* 2: Bastiaanssen
-				* 3: Jafaar (default)
-				* 4: Anderson
-				* 5: vineyard
-				* 6: Carrasco
-				* 7: Turner
+				* 0: Pôças
+				* 1: Bastiaanssen
+				* 2: Jafaar (default)
+				* 3: Anderson
+				* 4: vineyard
+				* 5: Carrasco
+				* 6: Turner
+				* 7: Haboudane
+				* 8: Brom (experimental)
 		:type method: int
 
 		:return: Leaf Area Index (LAI) :math:`(m^2.m^{-2})`
@@ -541,15 +539,15 @@ class VegIndices:
 		# 5:'vineyard', 6:'Carrasco', 7:'Turner', 8:'Haboudane',
 		# 9:'Brom'}
 
-		if method is 1:     # Pôças
+		if method is 0:     # Pôças
 			LAI = np.where(savi > 0, 11.0 * savi**3, 0)
 			LAI = np.where(savi > 0.817, 6, LAI)
 
-		elif method is 2:   # Bastiaanssen
+		elif method is 1:   # Bastiaanssen
 			LAI = np.where(savi > 0, np.log((0.61 - savi)/0.51)/0.91 * (-1), 0)
 			LAI = np.where(savi >= 0.61, 6, LAI)
 
-		elif method is 3:   # Jafaar
+		elif method is 2:   # Jafaar
 			LAI_1 = np.where(savi > 0, 11.0 * savi ** 3, 0)
 			LAI_1 = np.where(savi > 0.817, 6, LAI_1)
 
@@ -559,22 +557,22 @@ class VegIndices:
 
 			LAI = (LAI_1 + LAI_2)/2
 
-		elif method is 4:   # Anderson
+		elif method is 3:   # Anderson
 			LAI = (4 * osavi - 0.8) * (1 + 4.73e-6 * np.exp(15.64 * osavi))
 
-		elif method is 5:   # vineyard
+		elif method is 4:   # vineyard
 			LAI = 4.9 * ndvi - 0.46
 
-		elif method is 6:   # Carrasco
+		elif method is 5:   # Carrasco
 			LAI = 1.2 - 3.08 * np.exp(-2013.35 * ndvi ** 6.41)
 
-		elif method is 7:   # Turner
+		elif method is 6:   # Turner
 			LAI = 0.5724 + 0.0989 * ndvi - 0.0114 * ndvi**2 + 0.0004 * ndvi**3
 
-		elif method is 8:	# Haboudane
+		elif method is 7:	# Haboudane
 			LAI = 0.0918 ** (6.0002 * rdvi)
 
-		elif method is 9:	# Brom
+		elif method is 8:	# Brom
 			LAI = 6.0/(1 + np.exp(-(8 * savi - 5)))
 			# Method proposed by Brom (mathematical definition only,
 			# not tested). Good approximation with another methods (1, 2, 3) but

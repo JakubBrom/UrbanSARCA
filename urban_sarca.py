@@ -61,11 +61,11 @@ class UrbanSARCA:
         self.plugin_dir = os.path.dirname(__file__)
 
         # initialize locale
-        locale = QSettings().value('locale/userLocale')[0:2]
+        self.locale = QSettings().value('locale/userLocale')[0:2]
         locale_path = os.path.join(
             self.plugin_dir,
             'i18n',
-            'UrbanSARCA_{}.qm'.format(locale))
+            'UrbanSARCA_{}.qm'.format(self.locale))
 
         if os.path.exists(locale_path):
             self.translator = QTranslator()
@@ -212,8 +212,17 @@ class UrbanSARCA:
         """
         help_file = os.path.join(self.plugin_dir, "help", "build",
                                  "html", "index.html")
+        help_file_norm = os.path.normpath(help_file)
+
         try:
-            QDesktopServices.openUrl(QUrl(help_file))
+            if sys.platform != "win32":
+                QDesktopServices.openUrl(QUrl(help_file_norm,
+                                              QUrl.TolerantMode))
+            else:
+                print(help_file)
+                print(help_file_norm)
+                os.startfile(help_file_norm)
+
         except IOError:
             self.iface.messageBar().pushMessage(self.tr("Help error"),
                     self.tr("Ooops, an error occured during help file"
@@ -436,7 +445,7 @@ class UrbanSARCA:
         # 2. Veg. indices
         ndvi = vi.viNDVI(in_red, in_nir)
         msavi = vi.viMSAVI(in_red, in_nir)
-        lai = vi.LAI(in_red, in_nir, 5)
+        lai = vi.LAI(in_red, in_nir, self.lai_method)
         biom = vi.biomass_sat(ndvi)
 
         # 3. IF and radioactive deposition calculation
@@ -506,15 +515,24 @@ class UrbanSARCA:
         # TODO: import obrazku z lokalniho souboru --> nacitani z internetu
         #  je sileny...
 
+        if self.locale == "cs":
+            info_text = "Vývoj programu Urban Green SARCA byl " \
+                        "finančně podpořen projektem Ministerstva " \
+                        "vnitra České republiky VH20172020015"
+        else:
+            info_text = self.tr("Urban Green SARCA plug-in "
+                                "development has been supported by "
+                                "project of Ministry of the Interior "
+                                "of the Czech Republic No. "
+                                "VH20172020015")
+
         image = QImage()
         image.loadFromData(data)
         pixmap = QPixmap(image).scaledToHeight(128,
                                             Qt.SmoothTransformation)
         msgBox = QMessageBox()
         msgBox.setIconPixmap(pixmap)
-        msgBox.setText(self.tr("Urban Green SARCA plug-in development has "
-                       "been supported by project of Ministry of the "
-                       "Interior of the Czech Republic No. VH20172020015"))
+        msgBox.setText(info_text)
         msgBox.setWindowTitle(self.tr("Acknowledgement"))
         msgBox.exec()
 
@@ -562,6 +580,9 @@ class UrbanSARCA:
             lambda: self.selectFile(self.dockwidget.cbox_depo))
         self.dockwidget.pb_precip.clicked.connect(
             lambda: self.selectFile(self.dockwidget.cbox_precip))
+
+        # Set LAI method
+        self.lai_method = self.dockwidget.cbox_lai.currentIndex()
 
         # Calculate
         self.dockwidget.buttonBox.accepted.connect(self.calculate)

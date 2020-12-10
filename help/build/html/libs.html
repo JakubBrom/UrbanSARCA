@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.1.2
+                0.1.3
               </div>
             
           
@@ -1361,8 +1361,7 @@ For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator.sty))
-No file math.aux.
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def)
+(./math.aux) (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
@@ -1802,7 +1801,7 @@ in calculation.</p>
 <dd><p>Calculation of vegetation indices from spectral data.</p>
 <dl class="method">
 <dt id="SEBCS_lib.VegIndices.LAI">
-<code class="descname">LAI</code><span class="sig-paren">(</span><em>red</em>, <em>nir</em>, <em>method=3</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#VegIndices.LAI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.VegIndices.LAI" title="Permalink to this definition">¶</a></dt>
+<code class="descname">LAI</code><span class="sig-paren">(</span><em>red</em>, <em>nir</em>, <em>method=2</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SEBCS_lib.html#VegIndices.LAI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SEBCS_lib.VegIndices.LAI" title="Permalink to this definition">¶</a></dt>
 <dd><p>Leaf Area Index (LAI) calculated according to several methods.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1813,13 +1812,15 @@ in calculation.</p>
 <li><strong>nir</strong> (<em>numpy.ndarray</em>) – Spectral reflectance in NIR region (rel.)</li>
 <li><strong>method</strong> (<em>int</em>) – <p>Method of LAI calculation:</p>
 <ul>
-<li>1: Pôças</li>
-<li>2: Bastiaanssen</li>
-<li>3: Jafaar (default)</li>
-<li>4: Anderson</li>
-<li>5: vineyard</li>
-<li>6: Carrasco</li>
-<li>7: Turner</li>
+<li>0: Pôças</li>
+<li>1: Bastiaanssen</li>
+<li>2: Jafaar (default)</li>
+<li>3: Anderson</li>
+<li>4: vineyard</li>
+<li>5: Carrasco</li>
+<li>6: Turner</li>
+<li>7: Haboudane</li>
+<li>8: Brom (experimental)</li>
 </ul>
 </li>
 </ul>
