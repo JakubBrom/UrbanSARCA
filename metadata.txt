@@ -7,7 +7,7 @@ name=Urban Green SARCA
 qgisMinimumVersion=3.0
 description=Plugin for analysis of radioactive contamination of vegetation cover
  in (mostly) urban environment
-version=0.1.3
+version=0.1.4
 author=Jakub Brom, ENKI o.p.s. Třeboň
 email=jbrom@lanres.cz
 
@@ -46,6 +46,8 @@ repository=https://github.com/JakubBrom/UrbanSARCA
 hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
 changelog=
+    0.1.4 (220915)
+        Bux fixes
     0.1.3 (201210)
         Help for Windows platform has been provided
         Selection of LAI method which is used for calculation is now

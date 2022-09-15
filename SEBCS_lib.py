@@ -7,8 +7,8 @@
 #          begin                :
 #          date                 :
 #          git sha              : $Format:%H$
-#          copyright            : (C) 2014-2020 Jakub Brom
-#          email                : jbrom@zf.jcu.cz
+#          copyright            : (C) 2014-2022 Jakub Brom
+#          email                : jbrom@fzt.jcu.cz
 #
 #  ***************************************************************************/
 #  /***************************************************************************
