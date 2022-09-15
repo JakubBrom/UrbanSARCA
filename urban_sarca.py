@@ -510,11 +510,8 @@ class UrbanSARCA:
         self.iface.messageBar().clearWidgets()
 
     def showInfo(self):
-        icon_path = 'https://upload.wikimedia.org/wikipedia/commons/7/79/MV_%C4%8CR.png'
-        data = urllib.request.urlopen(icon_path).read()
-        # TODO: import obrazku z lokalniho souboru --> nacitani z internetu
-        #  je sileny...
 
+        # msgbox text
         if self.locale == "cs":
             info_text = "Vývoj programu Urban Green SARCA byl " \
                         "finančně podpořen projektem Ministerstva " \
@@ -526,15 +523,27 @@ class UrbanSARCA:
                                 "of the Czech Republic No. "
                                 "VH20172020015")
 
+        # set path to msgbox icon
+
+        # icon_path = 'https://upload.wikimedia.org/wikipedia/commons/7/79/MV_%C4%8CR.png'
+        # data = urllib.request.urlopen(icon_path).read()
+
+        localdir = os.path.dirname(__file__)
+        data = os.path.join(localdir, "MV_icon.png")
+
+        # Create icon
         image = QImage()
-        image.loadFromData(data)
+        image.load(data)
+
         pixmap = QPixmap(image).scaledToHeight(128,
                                             Qt.SmoothTransformation)
-        msgBox = QMessageBox()
-        msgBox.setIconPixmap(pixmap)
-        msgBox.setText(info_text)
-        msgBox.setWindowTitle(self.tr("Acknowledgement"))
-        msgBox.exec()
+
+        # MsgBox
+        msg_box = QMessageBox()
+        msg_box.setIconPixmap(pixmap)
+        msg_box.setText(info_text)
+        msg_box.setWindowTitle(self.tr("Acknowledgement"))
+        msg_box.exec()
 
     #--------------------------------------------------------------------------
 
