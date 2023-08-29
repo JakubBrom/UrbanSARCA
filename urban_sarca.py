@@ -8,7 +8,7 @@
                               -------------------
         begin                : 2020-03-31
         git sha              : $Format:%H$
-        copyright            : (C) 2020-2022 by Jakub Brom, ENKI o.p.s. Třeboň
+        copyright            : (C) 2020-2023 by Jakub Brom, ENKI o.p.s. Třeboň
         email                : jbrom@lanres.cz
  ***************************************************************************/
 
@@ -21,11 +21,9 @@
  *                                                                         *
  ***************************************************************************/
 """
-from qgis.PyQt.QtCore import QSettings, QTranslator, \
-    QCoreApplication, Qt, QUrl
+from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication, Qt, QUrl
 from qgis.PyQt.QtGui import QIcon, QDesktopServices, QImage, QPixmap
-from qgis.PyQt.QtWidgets import QAction, QFileDialog, QComboBox, \
-    QPushButton, QMessageBox
+from qgis.PyQt.QtWidgets import QAction, QFileDialog, QComboBox, QPushButton, QMessageBox, QSpinBox, QTableWidgetItem
 # Initialize Qt resources from file resources.py
 from .resources import *
 
@@ -195,6 +193,12 @@ class UrbanSARCA:
                 # Create the dockwidget (after translation) and keep reference
                 self.dockwidget = UrbanSARCADockWidget()
 
+        # Add rows to reference tresholds table
+        self.dockwidget.pb_plus.clicked.connect(lambda: self.tableAddRow(self.dockwidget.tw_reflevel))
+
+        # Remove rows from reference tresholds table
+        self.dockwidget.pb_minus.clicked.connect(lambda: self.tableRemoveRow(self.dockwidget.tw_reflevel))
+
         # Help
         self.dockwidget.buttonBox.helpRequested.connect(self.pluginHelp)
 
@@ -227,6 +231,43 @@ class UrbanSARCA:
             self.iface.messageBar().pushMessage(self.tr("Help error"),
                     self.tr("Ooops, an error occured during help file"
                     " opening..."), level=Qgis.Warning, duration=5)
+
+    def tableRemoveRow(self, table):
+        """Remove row from table"""
+
+        # Get row counts:
+        row_count = table.rowCount()
+        table.setRowCount(row_count - 1)
+
+    def tableAddRow(self, table):
+        """
+        Add row to TableWidget. The first column is Reference level treshold description, the second is value (Bq/m2).
+
+        :param table: QTableWidget
+        :return:
+        """
+
+        # Set column witdth
+        # table.setColumnWidth(0, 250)
+
+        # Get row counts:
+        row_count = table.rowCount()
+
+        # Set new row
+        table.setRowCount(row_count + 1)
+
+        # Add labels and spinbox for RL values
+        # Create label
+        label = 'RL {num}'.format(num=str(row_count + 1))
+
+        # Add label to table
+        table.setItem(row_count, 0, QTableWidgetItem(label))
+
+        # Add Spinbox
+        spin = QSpinBox()
+        spin.setMaximum(2147483647)
+        table.setCellWidget(row_count, 1, spin)
+
 
     def selectFile(self, comboBox):
         """
@@ -296,8 +337,8 @@ class UrbanSARCA:
 
         self.dockwidget.le_out_folder.clear()
         self.dockwidget.sbox_precip.setValue(0.00)
-        self.dockwidget.sbox_ru1.setValue(5000)
-        self.dockwidget.sbox_ru2.setValue(3000000)
+        # self.dockwidget.sbox_ru1.setValue(5000)
+        # self.dockwidget.sbox_ru2.setValue(3000000)
         self.dockwidget.sbox_hl.setValue(1000)
         self.dockwidget.cbox_cont.setCurrentIndex(0)
         self.dockwidget.rb_precip_konst.setChecked(True)
@@ -404,8 +445,11 @@ class UrbanSARCA:
             radionuclide = 1.0
 
         # Constants
-        ref_level1 = self.dockwidget.sbox_ru1.value()
-        ref_level2 = self.dockwidget.sbox_ru2.value()
+        r_count = self.dockwidget.tw_reflevel.rowCount()
+        ref_levels_list = list([self.dockwidget.tw_reflevel.cellWidget(i, 1).value() for i in range(r_count)])
+        ref_names_list = list([self.dockwidget.tw_reflevel.item(i, 0).text() for i in range(r_count)])
+        ref_levels_dict = {ref_names_list[i]: ref_levels_list[i] for i in range(len(ref_levels_list))}
+
         hyg_lim = self.dockwidget.sbox_hl.value()
 
         # Output path
@@ -456,7 +500,7 @@ class UrbanSARCA:
 
         # 4. RU and hyg_lim masks
         mask_HL = hygLimit(cont_weight, hyg_lim)
-        mask_RU = referLevel(in_depo, ref_level1, ref_level2)
+        mask_RU = referLevel(in_depo, ref_levels_dict)
 
         # 5. Layers export
         output = {

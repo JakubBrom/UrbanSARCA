@@ -265,8 +265,7 @@ význam vegetačního krytu, který lze za daných podmínek odstranit z půdní
 povrchu. Limitem je zde množství živé nadzemní biomasy 0,5 :math:`t.ha^{-1}`,
 kdy předpokládáme, že sklizeň menšího množství biomasy na danou plochu je již
 neefektivní, případně technicky nemožná. Hranice referenčních úrovní lze
-nastavit přímo v uživatelském rozhraní Urban Green SARCA. Přednastaveny jsou
-hodnoty 5000 :math:`Bq.m^{-2}` a 3 :math:`MBq.m^{-2}`.
+nastavit přímo v uživatelském rozhraní Urban Green SARCA.
 Vedle vrstvy referenčních úrovní je výstupem modelu vrstva překročení
 hygienického limitu kontaminace biomasy. Rastrová vrstva nese hodnoty 0 pro
 pixely, ve kterých je zjištěna hodnota úrovně hmotnostní kontaminace biomasy

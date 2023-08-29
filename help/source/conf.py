@@ -49,7 +49,7 @@ copyright = u'2020, Jakub Brom, ENKI o.p.s. Třeboň'
 # built documents.
 #
 # The short X.Y version.
-version = '0.1.3'
+version = '0.1.5'
 # The full version, including alpha/beta/rc tags.
 release = 'alpha'
 

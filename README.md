@@ -25,8 +25,7 @@ well documented, e.g. urban areas.
 Download plugin in zip format and add it to QGIS using plugin manager
 (Plugins/Manage and Install Plugin). Plugin Urban Green Sarca is
  available for QGIS 3.+
- Urban Green SARCA is available in QGIS plugin repository as an
-  experimental plugin. 
+ Urban Green SARCA is available in QGIS plugin repository.
 
 
 **Acknowledgement**

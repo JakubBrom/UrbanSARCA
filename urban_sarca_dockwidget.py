@@ -8,7 +8,7 @@
                              -------------------
         begin                : 2020-03-31
         git sha              : $Format:%H$
-        copyright            : (C) 2020-2022 by Jakub Brom, ENKI o.p.s. Třeboň
+        copyright            : (C) 2020-2023 by Jakub Brom, ENKI o.p.s. Třeboň
         email                : jbrom@lanres.cz
  ***************************************************************************/
 

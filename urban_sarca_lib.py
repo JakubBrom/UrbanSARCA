@@ -8,7 +8,7 @@
 #  Author: Jakub Brom
 #  Date: 2020 - 10 - 07
 #
-#  Copyright (c)  Jakub Brom, 2020 - 2022.
+#  Copyright (c)  Jakub Brom, 2020 - 2023.
 #
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -117,30 +117,25 @@ def contMass(cont_biomass, fresh_biomass):
 
 	return cont_mass
 
-def referLevel(depo, ref_level1=5000, ref_level2=3000000):
+def referLevel(depo, rl_dict):
 	"""
-	Mask of radioactive deposition for three reference levels (categories):
-	\n
-
-	*0: Low* \n
-
-	*1: Middle* \n
-
-	*2: High*
-
-	\n
+	Mask of radioactive deposition for reference levels (categories) defined by tresholds.
 
 	:param depo: Total radioactive deposition :math:`(Bq.m^{-2})`
-	:param ref_level1: Lower reference level treshold \
-	:math:`(Bq.m^{-2})`. Default value = 5000 :math:`Bq.m^{-2}`
-	:param ref_level2: Upper reference level treshold \
-	:math:`(Bq.m^{-2})`. Default value = 3000000 :math:`Bq.m^{-2}`
-	:return: Mask of radioactive deposition for three reference levels
+	:param rl_dict: Dictionary with reference level tresholds :math:`(Bq.m^{-2})` and their keys (RL 1, RL 2, ...).
+	:return: Mask of radioactive deposition for reference levels.
 	"""
 
 	try:
-		reference_groups = np.where(depo >= ref_level2, 2.0, 1.0)
-		reference_groups = np.where(depo < ref_level1, 0.0, reference_groups)
+		# Sort dict according to values and extract RL values for categories
+		rl_dict_sort = {k: v for k, v in sorted(rl_dict.items(), key=lambda item: item[1])}
+		rl_keys = [int(i.split(' ')[1]) for i in list(rl_dict_sort.keys())]
+		rl_values = list(rl_dict_sort.values())
+
+		# Make ref_levels array
+		reference_groups = np.where(depo < rl_values[0], 0.0, depo)
+		for i in range(0,len(rl_keys)):
+			reference_groups = np.where(depo >= rl_values[i], rl_keys[i], reference_groups)
 	except ArithmeticError:
 		raise ArithmeticError("Mask for reference levels has not been"
 							  " calculated")
